@@ -12,7 +12,6 @@ Target Bodyfat Percentage <input type="number" id="target_bodyfat_pct" /></br>
 <script>
 function myFunction()
 {
-
 	var num = document.getElementById("target_bodyfat_pct").value;
 	var result = Number(num) * 3.0
 	var res = String(result);

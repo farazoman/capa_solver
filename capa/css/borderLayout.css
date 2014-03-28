@@ -1,0 +1,165 @@
+
+body{
+   background-position:center;
+   background-image:url(../imgs/cern.jpg);
+   background-size: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   height: 1000%;
+
+     /*background-color:rgba(255,255,255,1.1);
+     background-color: rgb(200, 54, 54); The Fallback */
+   background-color: rgba(200, 54, 54, 0.5);
+
+    text-align:center;
+    padding-top: 4em;
+    color:#50aa00;
+   /* 
+    font-family: main, Calibri;
+    
+    width: 50em;
+    margin: 1em auto; /* center */ 
+    /*padding: 3em;
+    border: 0em solid black;
+    -moz-box-shadow: 0 0 5px 5px #a8a7a7;
+    -webkit-box-shadow: 0 0 5px 5px#a8a7a7;
+    box-shadow: 0 0 5px 5px #a8a7a7;*/
+
+}
+body {
+  background-color: #EBE8E4;
+  color: #222;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+@media (min-width:800px){
+  #div1{
+    width:40%;
+    display:inline-block;
+    text-align:center;
+    background-color: red;
+  }
+
+  #div2{
+     text-align:center;
+    width:90%;
+    height: 20em;
+    padding-left: 10em;
+    padding-right: 0em;
+    display:block;
+    text-align:left;
+    background-color: rgba(200,220,220,.8);
+  }
+}
+
+
+nav {
+     position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  background-color: #fffffa;
+  border: 1px solid #dedede;
+  border-radius: .1em;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  font-size: 1.3em;
+  /*overflow: hidden;*/
+  width: 100%; 
+}
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+      
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+      
+      nav > ul > li > a > .caret {
+        border-top: 4em solid #aaa;
+        border-right: 4em solid transparent;
+        border-left: 4em solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+  
+        -webkit-transition: color 0.1s linear;
+          -moz-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+          transition: color 0.1s linear; 
+      }
+
+      nav > ul > li > a {
+        color: #aaa;
+        display: block;
+        line-height: 2.6em;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+
+        nav > ul > li:hover {
+          background-color: rgb( 40, 44, 47 );
+        }
+
+        nav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+      
+      nav > ul > li > div {
+        background-color: rgb( 40, 44, 47 );
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 165px;
+        visibility: hidden;
+        z-index: 100;
+  
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+
+        nav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          nav > ul > li > div ul > li {
+            display: block;
+          }
+
+            nav > ul > li > div ul > li > a {
+              color: #fff;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+
+              nav > ul > li > div ul > li:hover > a {
+                background-color: rgba( 255, 255, 255, 0.1);
+              }

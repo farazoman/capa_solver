@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/borderLayout.css">
+    <link rel="shortcut icon" href="./res/Mystery_Coin.ico" >
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="div.js"></script>
+</head>
+
 <body>
+	<nav>
+	<ul>
+		<li><a href="#q1">Question 1</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+	</nav>
+	
+	<script>
+	function myFunction()
+	{
 
-<p>Click the button to create a variable, and display the result.</p>
+		var volt = document.getElementById("volt").value;
+		var res = document.getElementById("res").value;
+		var result = volt / res
+		result = result.toFixed(2);
 
-Target Bodyfat Percentage <input type="number" id="target_bodyfat_pct" /></br>
-        <input type="button" value="CALCULUS" onclick="myFunction()" />
-
-<script>
-function myFunction()
-{
-
-	var num = document.getElementById("target_bodyfat_pct").value;
-	var result = Number(num) * 3.0
-	var res = String(result);
-	document.getElementById("result").setAttribute("value",result);
-}
-</script>
+		document.getElementById("result").setAttribute("value",result);
+	}
+	</script>
 
 
- <p>Result</p> <input type="number" id="result" value="0" readonly />
+
+	 <div id="div2">
+	 <p id="q1">Click the button to create a variable, and display the result.</p>
+
+	Voltage <input type="number" id="volt" /></br>
+	Resistance <input type="number" id="res" /></br>
+    <input type="button" value="CALCULUS" onclick="myFunction()" />
+
+	 <p>Current is!<br\></p> <input type="number" id="result" value="0" readonly />
+</div>
 
 </body>
 </html>
