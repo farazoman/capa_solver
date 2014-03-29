@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><b>CAPA 10</b></p>
+<p><u>question 1</u></p>
+<button onclick="question1()">Calc</button>
+
+<p id="q1a"></p>
+<p id="q1b"></p>
+<p></p>
+
+<p><u>question 2</u></p>
+<button onclick="question2()">Calc</button>
+
+<p id="q2"></p>
+<p></p>
+
+<p><u>question 3</u></p>
+<button onclick="question3()">Calc</button>
+
+<p id="q3a"></p>
+<p id="q3b"></p>
+<p id="q3c"></p>
+<p id="q3d"></p>
+<p></p>
+
+<p><u>question 4</u></p>
+<button onclick="question4()">Calc</button>
+
+<p id="q4a"></p>
+<p id="q4b"></p>
+
+<p><u>question 5</u></p>
+<button onclick="question5()">Calc</button>
+
+<p id="q5a"></p>
+<p id="q5b"></p>
+<p id="q5c"></p>
+<p id="q5d"></p>
+<p id="q5e"></p>
+
+<script>
+	function question1()
+	{
+		var intens = 794;
+		var dim1 = 49.3;
+		var dim2 = 99;
+		var time = 3;
+		var q1_a = 100*Math.round((intens*dim1*Math.pow(10,-4)*dim2*time*30)/100);
+		var q1_b = q1_a/Math.pow(10,8);
+		var calc1a=document.getElementById("q1a");
+		calc1a.innerHTML="answer to a: " + q1_a + " J";
+		var calc1b=document.getElementById("q1b");
+		calc1b.innerHTML="answer to b: " + q1_b + " kg*m/s or N s";
+	}
+	function question2()
+	{
+		var intens = 1340;
+		var percES = 61.9;
+		var percAB = 48.1;
+		var dim1 = 1.61;
+		var dim2 = 0.32;
+		var theta = 58.7;
+		var time = 80;
+		var q2_a = intens*percES*Math.pow(10,-4)*percAB*dim1*dim2*Math.sin(theta*(Math.PI/180))*60*time;
+		var calc2=document.getElementById("q2");
+		calc2.innerHTML="answer: " + 100*Math.round(q2_a/100) + " J";
+	}
+	function question3()
+	{
+		var intens = 1.17;
+		var mirrord = 1.05;
+		var plate = 2.05;
+		var volume = 1.02;
+		var temp = 20;
+		var percabs = 41.7;
+		var u = 4*Math.PI*Math.pow(10,-7);
+		var c = 3*Math.pow(10,8);
+		var q3_a = intens*Math.pow(10,3)*Math.pow((mirrord/2)/(plate*Math.pow(10,-2)),2);
+		var q3_b = Math.sqrt(2*u*q3_a*c);
+		var q3_c = q3_b/c;
+		var q3_d = Math.pow(10,3)*volume*4.1855*(100-temp)/(q3_a*Math.PI*Math.pow(plate*Math.pow(10,-2),2)*percabs*Math.pow(10,-2));
+		var calc3a = document.getElementById("q3a");
+		calc3a.innerHTML = "answer to a: " + 1000*Math.round(q3_a/1000) + " W/m^2";
+		var calc3b = document.getElementById("q3b");
+		calc3b.innerHTML = "answer to b: " + 100*Math.round(q3_b/100) + " N/C";
+		var calc3c = document.getElementById("q3c");
+		calc3c.innerHTML = "answer to c: " + Math.pow(10,-7)*Math.round(q3_c/Math.pow(10,-7)) + " T";
+		var calc3d = document.getElementById("q3d");
+		calc3d.innerHTML = "answer to d: " + 1*Math.round(q3_d/1) + " s";
+	}
+	function question4()
+	{
+		var freq = 21;
+		var pulset = 1.18;
+		var parab_R = 6;
+		var parab_D = 12;
+		var power = 24.4;
+		var c = 3*Math.pow(10,8);
+		var q4_a = c/(freq*Math.pow(10,9));
+		var q4_b = power*pulset*Math.pow(10,-6);
+		var calc4a = document.getElementById("q4a");
+		calc4a.innerHTML = "answer to a: " + Math.pow(10,-4)*Math.round(q4_a/Math.pow(10,-4)) + " m";
+		var calc4b = document.getElementById("q4b");
+		calc4b.innerHTML = "answer to b: " + Math.pow(10,-7)*Math.round(q4_b/Math.pow(10,-7)) + " J";	
+	}
+	function question5()
+	{
+		var intens = 230;
+		var angle_b = 45;
+		var angle_c_1 = 30;
+		var angle_c_2 = 60;
+		var angle_d = 15;
+		var angle_e = 5;
+		var q5_b = intens*Math.pow(Math.cos(angle_b*(Math.PI/180)),4);
+		var q5_c = intens*Math.pow(Math.cos((angle_c_2-angle_c_1)*(Math.PI/180)),6);
+		var q5_d = intens*Math.pow(Math.cos(angle_d*(Math.PI/180)),12);
+		var q5_e = intens*Math.pow(Math.cos(angle_e*(Math.PI/180)),36);
+		var calc5a = document.getElementById("q5a");
+		calc5a.innerHTML = "answer to a: " + (0.00).toFixed(2) + " W/m^2";
+		var calc5b = document.getElementById("q5b");
+		calc5b.innerHTML = "answer to b: " + 0.1*Math.round(q5_b/0.1) + " W/m^2";
+		var calc5c = document.getElementById("q5c");
+		calc5c.innerHTML = "answer to c: " + (0.1*Math.round(q5_c/0.1)).toFixed(1) + " W/m^2";
+		var calc5d = document.getElementById("q5d");
+		calc5d.innerHTML = "answer to d: " + 1*Math.round(q5_d/1) + " W/m^2"
+		var calc5e = document.getElementById("q5e");
+		calc5e.innerHTML = "answer to e: " + 1*Math.round(q5_e/1) + " W/m^2"
+	}
+	
+</script>
+
+</body>
+</html>
