@@ -32,7 +32,8 @@ Time <input type="number" id="q1_time" />min</br>
 answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s</p>
 <p></p>
 
-<p id="q2"><u>Question 2</u></p>
+<p id="q2"><u>Question 2</u></br>
+*There is an error in this question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.</p>
 Intensity <input type="number" id="q2_inty" />W/m<sup>2</sup></br>
 Percent Energy Reaching Earth's Surface <input type="number" id="q2_pcES" />%</br>
 Percent Energy Absorbed <input type="number" id="q2_pcAB" />%</br>
@@ -50,7 +51,7 @@ Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
 Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
 Volume <input type="number" id="q3_volume" />L</br>
 Temperature <input type="number" id="q3_temp" />&deg;C</br>
-Intensity <input type="number" id="q3_inty" />W/m<sup>2</sup></br>
+Intensity <input type="number" id="q3_inty" />kW/m<sup>2</sup></br>
 Percent Energy Absorbed <input type="number" id="q3_pcabs" />%</br>
 <button onclick="question3()">Calc</button>
 
@@ -84,15 +85,19 @@ answer to d: <input id="q5d" onclick="SelectAll('q5d');" readonly /></br>
 answer to e: <input id="q5e" onclick="SelectAll('q5e');" readonly /></p>
 
 <p id="q6"><u>Question 6</u></br>
-Enter large values with e, ex. 1.2*10<sup>5</sup> is 1.2e5.</p>
+Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.</p>
 Mass of Sun <input type="number" id="q6_mass_s" />kg</br>
 Distance of Sun <input type="number" id="q6_r_s" />million km</br>
 Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
 Mass of Earth <input type="number" id="q6_mass_e" />kg</br>
 Radius of Earth <input type="number" id="q6_r_e" />km</br>
+Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
+Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
+Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
 <button onclick="question6()">Calculate</button>
 
-<p>answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></p>
+<p>answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
+answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></p>
 
 </body>
 </html>

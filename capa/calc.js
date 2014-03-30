@@ -91,12 +91,18 @@ function question2(){
 
 	function question6(){
 
-		var q6_mass_s = 1.99e30;
-		var q6_r_s = 153;
+		var q6_mass_s = document.getElementById("q6_mass_s").value;
+		var q6_r_s = document.getElementById("q6_r_s").value;
 		var q6_inty = 1370;
-		var q6_mass_e = 5.97e24;
+		var q6_mass_e = document.getElementById("q6_mass_e").value;
 		var q6_r_e = 6370;
+		var q6_area = 4e4
+		var q6_density = 2.4e3
+		var q6_thick = 1e-4
 		var G = 6.67*Math.pow(10,-11);
+		var c = 3*Math.pow(10,8)
 		var q6_a_result = G*q6_mass_s*q6_mass_e/Math.pow(q6_r_s*Math.pow(10,9),2);
+		var q6_b_result = Math.PI*Math.pow((q6_r_e*1000),2)*q6_inty/c;
 		document.getElementById("q6a").setAttribute("value",Math.pow(10,20)*Math.round(q6_a_result/Math.pow(10,20)) + " N");
+		document.getElementById("q6b").setAttribute("value",Math.pow(10,6)*Math.round(q6_b_result/Math.pow(10,6)) + " N");
 	}
