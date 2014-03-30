@@ -9,6 +9,7 @@
 </head>
 
 <body>
+	<header role="banner" id="top">
 	<nav>
 	<ul>
 		<li><a class="scroll" href="#q1">Question 1</a></li>
@@ -49,48 +50,67 @@
 		<p><b>CAPA 10</b></p>
 		<p>Enter your given CAPA values, and click 'Calculate' to recieve the result.</p>
 
-		<p id="q1"><u>Question 1</u></br>
-		Warning: there is currently a problem with the results of question 1. You may try these results, but they differ from the computer's answer and may or may not be accepted.</p>
-		Intensity <input type="number" id="q1_inty" />W/m<sup>2</sup></br>
-		Dimension 1 <input type="number" id="q1_d1" />cm</br>
-		Dimension 2 <input type="number" id="q1_d2" />cm</br>
-		Time <input type="number" id="q1_time" />min</br>
+		<h1><anchor id="q1"
+		  style="padding-top: 70px; margin-top: -70px;">Question 1
+		</anchor></h1>
+		<p>
+			Warning: there is currently a problem with the results of question 1. You may try these results, but they differ from the computer's answer and may or may not be accepted.
+	    </p>
+		<p>
+			Intensity <input type="number" id="q1_inty" />W/m<sup>2</sup></br>
+			Dimension 1 <input type="number" id="q1_d1" />cm</br>
+			Dimension 2 <input type="number" id="q1_d2" />cm</br>
+			Time <input type="number" id="q1_time" />min</br>
+		</p>
 		<button onclick="question1()">Calculate</button>
+		<p>
+			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
+			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s
+		</p>
 
-		<p>answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
-		answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s</p>
-		<p></p>
-
-		<p id="q2"><u>Question 2</u></br>
-		*There is an error in the writing of the question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.</p>
-		Intensity <input type="number" id="q2_inty" />W/m<sup>2</sup></br>
-		Percent Energy Reaching Earth's Surface <input type="number" id="q2_pcES" />%</br>
-		Percent Energy Absorbed <input type="number" id="q2_pcAB" />%</br>
-		Time <input type="number" id="q2_time" />min</br>
-		Dimension 1 <input type="number" id="q2_d1" />m</br>
-		Dimension 2 <input type="number" id="q2_d2" />m</br>
-		Elevation of the Sun <input type="number" id="q2_theta" />&deg; (degrees)</br>
+		<h1><anchor id="q2"
+		  style="padding-top: 70px; margin-top: -70px;">Question 2
+		</anchor></h1>
+		<p>
+			*There is an error in the writing of the question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.
+		</p>
+		<p>
+			Intensity <input type="number" id="q2_inty" />W/m<sup>2</sup></br>
+			Percent Energy Reaching Earth's Surface <input type="number" id="q2_pcES" />%</br>
+			Percent Energy Absorbed <input type="number" id="q2_pcAB" />%</br>
+			Time <input type="number" id="q2_time" />min</br>
+			Dimension 1 <input type="number" id="q2_d1" />m</br>
+			Dimension 2 <input type="number" id="q2_d2" />m</br>
+			Elevation of the Sun <input type="number" id="q2_theta" />&deg; (degrees)</br>
+		</p>
 		<button onclick="question2()">Calculate</button>
+		<p>
+			answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly />
+		</p>
 
-		<p>answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly /></p>
-		<p></p>
-
-		<p id="q3"><u>Question 3</u></p>
-		Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
-		Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
-		Volume <input type="number" id="q3_volume" />L</br>
-		Temperature <input type="number" id="q3_temp" />&deg;C</br>
-		Intensity <input type="number" id="q3_inty" />kW/m<sup>2</sup></br>
-		Percent Energy Absorbed <input type="number" id="q3_pcabs" />%</br>
+		<h1><anchor id="q3"
+		  style="padding-top: 70px; margin-top: -70px;">Question 3
+		</anchor></h1>
+		<p>
+			Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
+			Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
+			Volume <input type="number" id="q3_volume" />L</br>
+			Temperature <input type="number" id="q3_temp" />&deg;C</br>
+			Intensity <input type="number" id="q3_inty" />kW/m<sup>2</sup></br>
+			Percent Energy Absorbed <input type="number" id="q3_pcabs" />%</br>
+		</p>
 		<button onclick="question3()">Calculate</button>
 
-		<p>answer to a: <input id="q3a" onclick="SelectAll('q3a');" readonly /></br>
+		<p>
+		answer to a: <input id="q3a" onclick="SelectAll('q3a');" readonly /></br>
 		answer to b: <input id="q3b" onclick="SelectAll('q3b');" readonly /></br>
 		answer to c: <input id="q3c" onclick="SelectAll('q3c');" readonly /></br>
 		answer to d: <input id="q3d" onclick="SelectAll('q3d');" readonly /></p>
 		<p></p>
 
-		<p id="q4"><u>Question 4</u></p>
+		<p><u><anchor id="q4"
+		  style="padding-top: 70px; margin-top: -70px;">Question 4
+		</anchor></u></p>
 		Frequency of Radiation <input type="number" id="q4_freq" />GHz</br>
 		Length of Pulse <input type="number" id="q4_pulse_t" />ns</br>
 		Radius of Parabolic Reflector <input type="number" id="q4_parab_R" />cm</br>
@@ -103,7 +123,9 @@
 		answer to d: <input id="q4d" onclick="SelectAll('q4d');" readonly />or N/C</br>
 		answer to e: <input id="q4e" onclick="SelectAll('q4e');" readonly /></p>
 
-		<p id="q5"><u>Question 5</u></p>
+		<p><u><anchor id="q5"
+		  style="padding-top: 70px; margin-top: -70px;">Question 5
+		</anchor></u></p>
 		Intensity <input type="number" id="q5_inty" />W/m<sup>2</sup></br>
 		<button onclick="question5()">Calculate</button>
 
@@ -113,7 +135,9 @@
 		answer to d: <input id="q5d" onclick="SelectAll('q5d');" readonly /></br>
 		answer to e: <input id="q5e" onclick="SelectAll('q5e');" readonly /></p>
 
-		<p id="q6"><u>Question 6</u></br>
+		<p><u><anchor id="q6"
+		  style="padding-top: 70px; margin-top: -70px;">Question 6
+		</anchor></u></p>
 		Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.</p>
 		Mass of Sun <input type="number" id="q6_mass_s" />kg</br>
 		Distance of Sun <input type="number" id="q6_r_s" />million km</br>
