@@ -3,7 +3,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/borderLayout.css">
-    <link rel="shortcut icon" href="./res/Mystery_Coin.ico" >
+    <link rel="shortcut icon" href="./imgs/Mystery_Coin.ico" >
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="div.js"></script>
 </head>
@@ -20,7 +20,11 @@
 	<script>
 	function myFunction()
 	{
-
+		/*
+		convention as follows:
+		all parameters called as (ID) q#_name where # is question number and name is parameter name i.e volt.
+		also the result convention will be q#_n_result where # si capa question number and n is the anser to the part of the question i.e a,b,c
+		*/
 		var volt = document.getElementById("volt").value;
 		var res = document.getElementById("res").value;
 		var result = volt / res
@@ -32,15 +36,15 @@
 
 
 
-	 <div id="div2">
-	 <p id="q1">Click the button to create a variable, and display the result.</p>
+	<div id="div2">
+		 <p id="q1">Click the button to create a variable, and display the result.</p>
 
-	Voltage <input type="number" id="volt" /></br>
-	Resistance <input type="number" id="res" /></br>
-    <input type="button" value="CALCULUS" onclick="myFunction()" />
+		Voltage <input type="number" id="volt" /></br>
+		Resistance <input type="number" id="res" /></br>
+	    <input type="button" value="CALCULUS" onclick="myFunction()" />
 
-	 <p>Current is!<br\></p> <input type="number" id="result" value="0" readonly />
-</div>
+		 <p>Current is!<br\></p> <input type="number" id="result" value="0" readonly />
+	</div>
 
 </body>
 </html>

@@ -27,7 +27,7 @@ function question2(){
 		var q2_theta = document.getElementById("q2_theta").value;
 		var q2_time = document.getElementById("q2_time").value;
 		var q2_result = q2_inty*q2_pcES*Math.pow(10,-4)*q2_pcAB*q2_d1*q2_d2*Math.sin(q2_theta*(Math.PI/180))*60*q2_time;
-		document.getElementById("q2").setAttribute("value",100*Math.round(q2_result/100) + " J");
+		document.getElementById("q2_ans").setAttribute("value",100*Math.round(q2_result/100) + " J");
 	}
 
 	function question3(){

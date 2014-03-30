@@ -1,13 +1,23 @@
+.bg {
+    background:url(../imgs/cern.jpg) no-repeat;
+    position:fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 1000%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
 
 body{
-   background-position:center;
+   /*background-position:center;
    background-image:url(../imgs/cern.jpg);
    background-size: 100%;
    background-attachment: fixed;
    background-repeat: no-repeat;
    height: 1000%;
 
-     /*background-color:rgba(255,255,255,1.1);
+     background-color:rgba(255,255,255,1.1);
      background-color: rgb(200, 54, 54); The Fallback */
    background-color: rgba(200, 54, 54, 0.5);
 
@@ -43,20 +53,22 @@ body {
   }
 
   #div2{
-     text-align:center;
+    text-align:center;
     width:100%;
     height: 20em;
     padding-left: 0em;
     margin-right: 0em;
     display:block;
-    text-align:left;
     background-color: rgba(200,220,220,.8);
+    position: relative;
+    z-index: 1;
   }
 }
 
 
 nav {
      position: fixed;
+     z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
