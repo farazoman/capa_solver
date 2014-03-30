@@ -9,7 +9,6 @@
 </head>
 
 <body>
-	<header role="banner" id="top">
 	<nav>
 	<ul>
 		<li><a class="scroll" href="#q1">Question 1</a></li>
@@ -22,6 +21,7 @@
 	</nav>
 
 <script>
+/*	Old scrolling code
 	$(".scroll").click(function(event){
          event.preventDefault();
          //calculate destination place
@@ -34,7 +34,8 @@
          //go to destination
          $('html,body').animate({scrollTop:dest}, 1000,'swing');
      });
-	
+*/	
+
 	$(window).scroll(function(e){
 	  parallax();
 	});
@@ -42,6 +43,30 @@
 	  var scrolled = $(window).scrollTop();
 	  $('.bg').css('top',-(scrolled*0.2)+'px');
 	}
+
+	function scroll_if_anchor(href) {
+	    href = typeof(href) == "string" ? href : $(this).attr("href");
+
+	    if(!href) return;
+
+	    var fromTop = 70;
+
+	    if(href.charAt(0) == "#") {
+	        var $target = $(href);
+	        
+	        if($target.length) {
+	            $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+	            if(history && "pushState" in history) {
+	                history.pushState({}, document.title, window.location.pathname + href);
+	                return false;
+	            }
+	        }
+	    }
+	}    
+
+	scroll_if_anchor(window.location.hash);
+
+	$("body").on("click", "a", scroll_if_anchor);
 </script>
 
 	<div class="bg"></div>
@@ -50,9 +75,7 @@
 		<p><b>CAPA 10</b></p>
 		<p>Enter your given CAPA values, and click 'Calculate' to recieve the result.</p>
 
-		<h1><anchor id="q1"
-		  style="padding-top: 70px; margin-top: -70px;">Question 1
-		</anchor></h1>
+		<h1 id="q1">Question 1</h1>
 		<p>
 			Warning: there is currently a problem with the results of question 1. You may try these results, but they differ from the computer's answer and may or may not be accepted.
 	    </p>
@@ -68,9 +91,7 @@
 			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s
 		</p>
 
-		<h1><anchor id="q2"
-		  style="padding-top: 70px; margin-top: -70px;">Question 2
-		</anchor></h1>
+		<h1 id="q2">Question 2</h1>
 		<p>
 			*There is an error in the writing of the question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.
 		</p>
@@ -88,9 +109,7 @@
 			answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly />
 		</p>
 
-		<h1><anchor id="q3"
-		  style="padding-top: 70px; margin-top: -70px;">Question 3
-		</anchor></h1>
+		<h1 id="q3">Question 3</h1>
 		<p>
 			Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
 			Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
@@ -107,9 +126,7 @@
 			answer to d: <input id="q3d" onclick="SelectAll('q3d');" readonly />
 		</p>
 
-		<h1><anchor id="q4"
-		  style="padding-top: 70px; margin-top: -70px;">Question 4
-		</anchor></h1>
+		<h1 id="q4">Question 4</h1>
 		<p>
 			Frequency of Radiation <input type="number" id="q4_freq" />GHz</br>
 			Length of Pulse <input type="number" id="q4_pulse_t" />ns</br>
@@ -125,9 +142,7 @@
 			answer to e: <input id="q4e" onclick="SelectAll('q4e');" readonly />
 		</p>
 
-		<h1><anchor id="q5"
-		  style="padding-top: 70px; margin-top: -70px;">Question 5
-		</anchor></h1>
+		<h1 id="q5">Question 5</h1>
 		<p>
 			Intensity <input type="number" id="q5_inty" />W/m<sup>2</sup>
 		</p>
@@ -140,24 +155,26 @@
 			answer to e: <input id="q5e" onclick="SelectAll('q5e');" readonly />
 		</p>
 
-		<p><u><anchor id="q6"
-		  style="padding-top: 70px; margin-top: -70px;">Question 6
-		</anchor></u></p>
-		Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.</p>
-		Mass of Sun <input type="number" id="q6_mass_s" />kg</br>
-		Distance of Sun <input type="number" id="q6_r_s" />million km</br>
-		Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
-		Mass of Earth <input type="number" id="q6_mass_e" />kg</br>
-		Radius of Earth <input type="number" id="q6_r_e" />km</br>
-		Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
-		Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
-		Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
+		<h1 id="q6">Question 6</h1>
+		<p>
+			Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.</br>
+			Mass of Sun <input type="number" id="q6_mass_s" />kg</br>
+			Distance of Sun <input type="number" id="q6_r_s" />million km</br>
+			Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
+			Mass of Earth <input type="number" id="q6_mass_e" />kg</br>
+			Radius of Earth <input type="number" id="q6_r_e" />km</br>
+			Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
+			Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
+			Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
+		</p>
 		<button onclick="question6()">Calculate</button>
-
-		<p>answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
-		answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
-		answer to c:
-	</p>
+		<p>
+			answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
+			answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
+			answer to c: <input id="q6c" onclick="SelectAll('q6c');" readonly /></br>
+			answer to d: <input id="q6d" onclick="SelectAll('q6d');" readonly /></br>
+			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br></br>
+		</p>
 	</div>
 
 </body>

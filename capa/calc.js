@@ -93,16 +93,22 @@ function question2(){
 
 		var q6_mass_s = document.getElementById("q6_mass_s").value;
 		var q6_r_s = document.getElementById("q6_r_s").value;
-		var q6_inty = 1370;
+		var q6_inty = document.getElementById("q6_inty").value;
 		var q6_mass_e = document.getElementById("q6_mass_e").value;
-		var q6_r_e = 6370;
-		var q6_area = 4e4
-		var q6_density = 2.4e3
-		var q6_thick = 1e-4
+		var q6_r_e = document.getElementById("q6_r_e").value;
+		var q6_area = document.getElementById("q6_area").value;
+		var q6_density = document.getElementById("q6_density").value;
+		var q6_thick = document.getElementById("q6_thick").value;
 		var G = 6.67*Math.pow(10,-11);
 		var c = 3*Math.pow(10,8)
 		var q6_a_result = G*q6_mass_s*q6_mass_e/Math.pow(q6_r_s*Math.pow(10,9),2);
 		var q6_b_result = Math.PI*Math.pow((q6_r_e*1000),2)*q6_inty/c;
+		var q6_c_result = q6_inty*q6_area/c;
+		var q6_d_result = G*q6_mass_s*q6_density*q6_area*q6_thick/Math.pow(q6_r_s*Math.pow(10,9),2);
+		var q6_e_result = q6_c_result*Math.pow(q6_r_s*Math.pow(10,9),2)/(G*q6_mass_s*q6_density*q6_area);
 		document.getElementById("q6a").setAttribute("value",Math.pow(10,20)*Math.round(q6_a_result/Math.pow(10,20)) + " N");
 		document.getElementById("q6b").setAttribute("value",Math.pow(10,6)*Math.round(q6_b_result/Math.pow(10,6)) + " N");
+		document.getElementById("q6c").setAttribute("value",(0.001*Math.round(q6_c_result/0.001)).toFixed(3) + " N");
+		document.getElementById("q6d").setAttribute("value",(0.1*Math.round(q6_d_result/0.1)).toFixed(1) + " N");
+		document.getElementById("q6e").setAttribute("value", (Math.pow(10,-9)*Math.round(q6_e_result/Math.pow(10,-9))).toFixed(9) + " m");
 	}
