@@ -14,7 +14,7 @@ function question1(){
 		var q1_a_result = 100*Math.round((q1_inty*q1_d1*Math.pow(10,-4)*q1_d2*q1_time*30)/100);
 		var q1_b_result = q1_a_result/Math.pow(10,8);
 		document.getElementById("q1a").setAttribute("value",q1_a_result + " J");
-		document.getElementById("q1b").setAttribute("value",(q1_b_result).toFixed(6) + " kg*m/s or N s");
+		document.getElementById("q1b").setAttribute("value",(q1_b_result).toFixed(6) + " kg*m/s");
 	}
 
 function question2(){
@@ -32,12 +32,12 @@ function question2(){
 
 	function question3(){
 
-		var q3_inty = 1.17;
-		var q3_mirrord = 1.05;
-		var q3_plater = 2.05;
-		var q3_volume = 1.02;
-		var q3_temp = 20;
-		var q3_pcabs = 41.7;
+		var q3_inty = document.getElementById("q3_inty").value;
+		var q3_mirrord = document.getElementById("q3_mirrord").value;
+		var q3_plater = document.getElementById("q3_plater").value;
+		var q3_volume = document.getElementById("q3_volume").value;
+		var q3_temp = document.getElementById("q3_temp").value;
+		var q3_pcabs = document.getElementById("q3_pcabs").value;
 		var u = 4*Math.PI*Math.pow(10,-7);
 		var c = 3*Math.pow(10,8);
 		var q3_a_result = q3_inty*Math.pow(10,3)*Math.pow((q3_mirrord/2)/(q3_plater*Math.pow(10,-2)),2);
@@ -47,16 +47,16 @@ function question2(){
 		document.getElementById("q3a").setAttribute("value",1000*Math.round(q3_a_result/1000) + " W/m^2");
 		document.getElementById("q3b").setAttribute("value",100*Math.round(q3_b_result/100) + " N/C");
 		document.getElementById("q3c").setAttribute("value",Math.pow(10,-7)*Math.round(q3_c_result/Math.pow(10,-7)).toFixed(7) + " T");
-		var calc3d = document.getElementById("q3d").setAttribute("value", Math.round(q3_d_result) + " s");
+		document.getElementById("q3d").setAttribute("value", Math.round(q3_d_result) + " s");
 	}
 
 	function question4(){
 
-		var q4_freq = 21;
-		var q4_pulse_t = 1.18;
-		var q4_parab_R = 6;
-		var q4_parab_D = 12;
-		var q4_power = 24.4;
+		var q4_freq = document.getElementById("q4_freq").value;
+		var q4_pulse_t = document.getElementById("q4_pulse_t").value;
+		var q4_parab_R = document.getElementById("q4_parab_R").value;
+		var q4_parab_D = document.getElementById("q4_parab_R").value*2;
+		var q4_power = document.getElementById("q4_power").value;
 		var c = 3*Math.pow(10,8);
 		var u = 4*Math.PI*Math.pow(10,-7)
 		var q4_a_result = c/(q4_freq*Math.pow(10,9));
@@ -67,7 +67,7 @@ function question2(){
 		document.getElementById("q4a").setAttribute("value",(Math.pow(10,-4)*Math.round(q4_a_result/Math.pow(10,-4))).toFixed(4) + " m");
 		document.getElementById("q4b").setAttribute("value",(Math.pow(10,-7)*Math.round(q4_b_result/Math.pow(10,-7))).toFixed(7) + " J");
 		document.getElementById("q4c").setAttribute("value",(Math.pow(10,-5)*Math.round(q4_c_result/Math.pow(10,-5))).toFixed(5) + " J/m^3");
-		document.getElementById("q4d").setAttribute("value",100*Math.round(q4_d_result/100) + " V/m or N/C");
+		document.getElementById("q4d").setAttribute("value",100*Math.round(q4_d_result/100) + " V/m");
 		document.getElementById("q4e").setAttribute("value",(Math.pow(10,-6)*Math.round(q4_e_result/Math.pow(10,-6))).toFixed(6) + " T");
 	}
 
@@ -91,10 +91,12 @@ function question2(){
 
 	function question6(){
 
-		var q6_mass_s = 1.99*Math.pow(10,30);
-		var q6_r_s = 153*Math.pow(10,6);
+		var q6_mass_s = 1.99e30;
+		var q6_r_s = 153;
 		var q6_inty = 1370;
-		var q6_mass_e = 5.97*Math.pow(10,24)
-		var q6_r_e = 6370
-		var q6_a_result = 0
+		var q6_mass_e = 5.97e24;
+		var q6_r_e = 6370;
+		var G = 6.67*Math.pow(10,-11);
+		var q6_a_result = G*q6_mass_s*q6_mass_e/Math.pow(q6_r_s*Math.pow(10,9),2);
+		document.getElementById("q6a").setAttribute("value",Math.pow(10,20)*Math.round(q6_a_result/Math.pow(10,20)) + " N");
 	}
