@@ -204,9 +204,11 @@ div{
 
 #opaque{
   opacity: 1 !important;
-  color: rgb( 240, 230, 255 ) !important;
-  font-size: 16;
+  color: rgb( 60, 60, 52 ) !important;
+  text-shadow: 0.1em 0.1em 0.15em #aaa;
+  font-size: 2em;
   padding: 5em 5em 5em 5em;
+  background-color: rgba(230,230,230,.4);
 }
 
 #slide1, #slide2{  }
