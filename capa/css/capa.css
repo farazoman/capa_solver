@@ -23,7 +23,8 @@ body{
 
     text-align:center;
     padding-top: 0em 0em 0em 0em;
-    color:#50aa00;
+    color:#4f4f4f;
+    font-family: 'autor';
    /* 
     font-family: main, Calibri;
     
@@ -36,14 +37,34 @@ body{
     box-shadow: 0 0 5px 5px #a8a7a7;*/
 
 }
+
+h1{
+  font-family: "vintage", "HelveticaNeue-Light", "Garamond";
+  font-size: 4em;
+}
+
 body {
   background-color: #000000;
-  color: #222;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
   font-size: 1.1em;
   margin: 0px 0px 0px 0px;
 }
+
+input[type="number"] {
+    font-family: 'autor', Calibri;
+    font-size: .6em;
+}
+
+input[type="text"] {
+    font-family: 'autor', Calibri;
+    font-size: .6em;
+}
+
+button{
+    font-family: 'autor', Calibri;
+    font-size: .6em;
+}
+
+
 
 @media (min-width:800px){
   #div1{
@@ -76,7 +97,7 @@ nav {
   background-color: #fffffa;
   border: 1px solid #dedede;
   border-radius: .1em;
-  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 .4em .4em -.35em rgba(0, 0, 0, 0.2);
   color: #888;
   display: block;
   margin: 0px 0px 0px 0px;
@@ -177,48 +198,106 @@ nav {
                 background-color: rgba( 255, 255, 255, 0.1);
               }
 
+div{
+  box-shadow:  #aaa;
+}
+
+#opaque{
+  opacity: 1 !important;
+  color: #000000 !important;
+}
+
 #slide1, #slide2{  }
 #slide1{
+  opacity: 1;
   background:url(../imgs/cern.jpg) 50% 0 no-repeat fixed;
+  opacity: .7;
   color: #fff;
-
-  height: 600px;
+  height: 30em;
   display: inherit;
   margin: 0;
-  padding: 200px 0 260px 0;
+  padding: 10em 0 19em 0;
   background-size: cover;
  
 }
 
 #slide2{
   background-color: #fff;
-  color: #333333;
-  height: 300px;
+
+  height: auto;
   margin: 0 auto;
   overflow: hidden;
-  padding: 200px 0;
+   box-shadow: 0em 5em 10em #282828;
+
 }
 
 #slide3{
+  opacity: 0.4;
   background: url(../imgs/bubble.jpg) 50% 0 no-repeat fixed;
   color: #fff;
-  height: 600px;
+  height: 25em;
   padding: 170px 0 200px 0; 
   background-size: cover;
 }
 
 #slide4{
-  background-color: #fff;
-  color: #333333;
-  height: 300px;
-  padding: 200px 0;
+  opacity: 0.4;
+  background: url(../imgs/big.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 25em;
+  padding: 170px 0 200px 0; 
+  background-size: cover;
 }
 
 #slide5{
-  background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
-  height: 200px;
-  margin: 0 auto;
-  padding: 250px 0;
+  opacity: 0.4;
+  background: url(../imgs/space.jpg) 50% 0 no-repeat fixed;
   color: #fff;
+  height: 25em;
+  padding: 170px 0 200px 0; 
   background-size: cover;
+}
+
+#slide6{
+  opacity: 0.4;
+  background: url(../imgs/wire.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 25em;
+  padding: 170px 0 200px 0; 
+  background-size: cover;
+}
+
+#slide7{
+  opacity: 0.4;
+  background: url(../imgs/flare.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 25em;
+  padding: 20em 0 5em 0; 
+  background-size: cover;
+}
+
+#slide8{
+  opacity: 0.4;
+  background: url(../imgs/dbz.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+
+@font-face {
+    font-family: 'vintage';
+    src: url('../fonts/2Dumb.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'autor';
+    src: url('../fonts/AutourOne-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+
 }
