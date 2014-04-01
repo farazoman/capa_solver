@@ -122,9 +122,9 @@ nav {
     }
       
       nav > ul > li > a > .caret {
-        border-top: 4em solid #aaa;
-        border-right: 4em solid transparent;
-        border-left: 4em solid transparent;
+        border-top: 0em solid #aaa;
+        border-right: 0em solid transparent;
+        border-left: 10em solid transparent;
         content: "";
         display: inline-block;
         height: 0;
@@ -141,7 +141,7 @@ nav {
         color: #aaa;
         display: block;
         line-height: 2.6em;
-        padding: 0 24px;
+        padding: 0 .8em;
         text-decoration: none;
       }
 
@@ -204,7 +204,7 @@ div{
 
 #opaque{
   opacity: 1 !important;
-  color: #000000 !important;
+  color: #aaf1f1 !important;
 }
 
 #slide1, #slide2{  }
