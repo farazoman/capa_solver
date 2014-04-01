@@ -74,14 +74,18 @@ function question2(){
 	function question5(){
 
 		var q5_inty = document.getElementById("q5_inty").value;
-		var q5_angle_b = 45;
-		var q5_angle_c = 30;
-		var q5_angle_d = 15;
-		var q5_angle_e = 5;
-		var q5_b_result = q5_inty*Math.pow(Math.cos(q5_angle_b*(Math.PI/180)),4);
-		var q5_c_result = q5_inty*Math.pow(Math.cos((q5_angle_c)*(Math.PI/180)),6);
-		var q5_d_result = q5_inty*Math.pow(Math.cos(q5_angle_d*(Math.PI/180)),12);
-		var q5_e_result = q5_inty*Math.pow(Math.cos(q5_angle_e*(Math.PI/180)),36);
+		var q5_bnum = document.getElementById("q5_bnum").value;
+		var q5_angle_b = document.getElementById("q5_angle_b").value;
+		var q5_cnum = document.getElementById("q5_cnum").value;
+		var q5_angle_c = document.getElementById("q5_angle_c").value;
+		var q5_dnum = document.getElementById("q5_dnum").value;
+		var q5_angle_d = document.getElementById("q5_angle_d").value;
+		var q5_enum = document.getElementById("q5_enum").value;
+		var q5_angle_e = document.getElementById("q5_angle_e").value;
+		var q5_b_result = q5_inty*Math.pow(Math.cos(q5_angle_b*(Math.PI/180)),(q5_bnum*2+2));
+		var q5_c_result = q5_inty*Math.pow(Math.cos((q5_angle_c)*(Math.PI/180)),(q5_cnum*2+2));
+		var q5_d_result = q5_inty*Math.pow(Math.cos(q5_angle_d*(Math.PI/180)),(q5_dnum*2+2));
+		var q5_e_result = q5_inty*Math.pow(Math.cos(q5_angle_e*(Math.PI/180)),(q5_enum*2+2));
 		document.getElementById("q5a").setAttribute("value",(0.00).toFixed(2) + " W/m^2");
 		document.getElementById("q5b").setAttribute("value",(0.1*Math.round(q5_b_result/0.1)).toPrecision(3) + " W/m^2");
 		document.getElementById("q5c").setAttribute("value",(0.1*Math.round(q5_c_result/0.1)).toPrecision(3) + " W/m^2");
