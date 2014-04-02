@@ -54,7 +54,7 @@ input[type="number"] {
     font-size: .6em;
 }
 
-input[type="text"] {
+input{
     font-family: 'autor', Calibri;
     font-size: .6em;
 }
