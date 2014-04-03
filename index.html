@@ -26,3 +26,207 @@
 	</script>
 </head>
 
+<body>
+	function scroll_if_anchor(href) {
+	    href = typeof(href) == "string" ? href : $(this).attr("href");
+
+	    if(!href) return;
+
+	    var fromTop = 70;
+
+	    if(href.charAt(0) == "#") {
+	        var $target = $(href);
+	        
+	        if($target.length) {
+	            $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+	            if(history && "pushState" in history) {
+	                history.pushState({}, document.title, window.location.pathname + href);
+	                return false;
+	            }
+	        }
+	    }
+	}    
+
+	scroll_if_anchor(window.location.hash);
+
+	$("body").on("click", "a", scroll_if_anchor);
+</script>
+
+	<!--<div class="bg"></div>-->
+		<p id="top"></p>
+	<div id="slide1">
+		<div id='opaque'>
+		<p><b>CAPA 10</b></p>
+		<p>
+		Enter your given CAPA values, and click 'Calculate' to recieve the result.</br>
+		When entering values 'e' notation is acceptable but doing '*10^2' is not.
+		The purpose of this resource is for referencing when studying.
+		</p>
+		</div>
+	</div>
+	
+	<div id="slide2">
+
+		<h1 id="q1">Question 1</h1>
+		<p>
+			Warning: Question 1 has been fixed, however these results may differ from the computer's answer, and therefore may not be accepted.
+	    </p>
+		<p>
+			Intensity <input type="number" id="q1_inty" />W/m<sup>2</sup></br>
+			Dimension 1 <input type="number" id="q1_d1" />cm</br>
+			Dimension 2 <input type="number" id="q1_d2" />cm</br>
+			Time <input type="number" id="q1_time" />min</br>
+		</p>
+		<button onclick="question1()">Calculate</button>
+		<p>
+			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
+			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s
+		</p>
+	</div>
+
+	<div id="slide3">
+		
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q2">Question 2</h1>
+		<p>
+			*There is an error in the writing of the question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.
+		</p>
+		<p>
+			Intensity <input type="number" id="q2_inty" />W/m<sup>2</sup></br>
+			Percent Energy Reaching Earth's Surface <input type="number" id="q2_pcES" />%</br>
+			Percent Energy Absorbed <input type="number" id="q2_pcAB" />%</br>
+			Time <input type="number" id="q2_time" />min</br>
+			Dimension 1 <input type="number" id="q2_d1" />m</br>
+			Dimension 2 <input type="number" id="q2_d2" />m</br>
+			Elevation of the Sun <input type="number" id="q2_theta" />&deg; (degrees)</br>
+		</p>
+		<button onclick="question2()">Calculate</button>
+		<p>
+			answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly />
+		</p>
+
+	</div>
+
+	<div id="slide4">
+		
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q3">Question 3</h1>
+		<p>
+			Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
+			Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
+			Volume <input type="number" id="q3_volume" />L</br>
+			Temperature <input type="number" value="20.0" id="q3_temp" />&deg;C</br>
+			Intensity <input type="number" id="q3_inty" />kW/m<sup>2</sup></br>
+			Percent Energy Absorbed <input type="number" id="q3_pcabs" />%</br>
+		</p>
+		<button onclick="question3()">Calculate</button>
+		<p>
+			answer to a: <input id="q3a" onclick="SelectAll('q3a');" readonly /></br>
+			answer to b: <input id="q3b" onclick="SelectAll('q3b');" readonly /></br>
+			answer to c: <input id="q3c" onclick="SelectAll('q3c');" readonly /></br>
+			answer to d: <input id="q3d" onclick="SelectAll('q3d');" readonly />
+		</p>
+
+	</div>
+
+	<div id="slide5">
+		
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q4">Question 4</h1>
+		<p>
+			Frequency of Radiation <input type="number" id="q4_freq" />GHz</br>
+			Length of Pulse <input type="number" id="q4_pulse_t" />ns</br>
+			Radius of Parabolic Reflector <input type="number" id="q4_parab_R" />cm</br>
+			Power <input type="number" id="q4_power" />kW</br>
+		</p>
+		<button onclick="question4()">Calculate</button>
+		<p>
+			answer to a: <input id="q4a" onclick="SelectAll('q4a');" readonly /></br>
+			answer to b: <input id="q4b" onclick="SelectAll('q4b');" readonly /></br>
+			answer to c: <input id="q4c" onclick="SelectAll('q4c');" readonly /></br>
+			answer to d: <input id="q4d" onclick="SelectAll('q4d');" readonly />or N/C</br>
+			answer to e: <input id="q4e" onclick="SelectAll('q4e');" readonly />
+		</p>
+
+	</div>
+	
+	<div id="slide6">
+		
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q5">Question 5</h1>
+		<p>
+			Intensity <input type="number" id="q5_inty" />W/m<sup>2</sup></br>
+			b: Number of (inserted) polarizers <input type="number" value="1" id="q5_bnum" /></br>
+			b: Angle of polarizer(s) <input type="number" value="45" id="q5_angle_b" />&deg;</br>
+			c: Number of polarizers <input type="number" value="2" id="q5_cnum" /></br>
+			c: Angle of polarizers <input type="number" value="30" id="q5_angle_c" />&deg;</br>
+			d: Number of polarizers <input type="number" value="5" id="q5_dnum" /></br>
+			d: Angle of polarizers <input type="number" value="15" id="q5_angle_d" />&deg;</br>
+			e: Number of polarizers <input type="number" value="17" id="q5_enum" /></br>
+			e: Angle of polarizers <input type="number" value="5" id="q5_angle_e" />&deg;
+		</p>
+		<button onclick="question5()">Calculate</button>
+		<p>
+			answer to a: <input id="q5a" onclick="SelectAll('q5a');" readonly /></br>
+			answer to b: <input id="q5b" onclick="SelectAll('q5b');" readonly /></br>
+			answer to c: <input id="q5c" onclick="SelectAll('q5c');" readonly /></br>
+			answer to d: <input id="q5d" onclick="SelectAll('q5d');" readonly /></br>
+			answer to e: <input id="q5e" onclick="SelectAll('q5e');" readonly />
+		</p>
+
+	</div>
+
+	<div id="slide7">
+		
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q6">Question 6</h1>
+		<p>
+			Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.
+		</p>
+		<p>
+			Mass of Sun <input type="number" value="1.99e30" id="q6_mass_s" />kg</br>
+			Distance of Sun <input type="number" id="q6_r_s" />million km</br>
+			Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
+			Mass of Earth <input type="number" value="5.97e24" id="q6_mass_e" />kg</br>
+			Radius of Earth <input type="number" value="6370" id="q6_r_e" />km</br>
+			Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
+			Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
+			Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
+		</p>
+		<button onclick="question6()">Calculate</button>
+		<p>
+			answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
+			answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
+			answer to c: <input id="q6c" onclick="SelectAll('q6c');" readonly /></br>
+			answer to d: <input id="q6d" onclick="SelectAll('q6d');" readonly /></br>
+			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br></br>
+		</p>
+	</div>
+
+	<div id="slide8">
+		<div>
+			<p>
+				Thanks for visiting!
+			</p>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
