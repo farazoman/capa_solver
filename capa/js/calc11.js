@@ -39,10 +39,20 @@ function question3(){
 }
 
 function question4(){
-	var q4_ior_o = 1.25
-	var q4_vol = 1.38
-	var q4_lambda = 485
-	var q4_ior_w = 1.34
-	var q4_result = 0
+	var q4_ior_o = document.getElementById("q4_ior_o").value;
+	var q4_vol = document.getElementById("q4_vol").value;
+	var q4_lambda = document.getElementById("q4_lambda").value;
+	var q4_ior_w = document.getElementById("q4_result").value;
+	var q4_result = 2*q4_vol*q4_ior_o/(q4_lambda*Math.pow(10,-9));
 	document.getElementById("q4_ans").setAttribute("value", q4_result.toPrecision(3) + " m^2");
+}
+
+function question5(){
+	var q5_n1 = 1.31
+	var q5_n2 = 1.46
+	var q5_w1 = 400
+	var q5_w2 = 600
+	var q5_a_result = 0
+	var q5_b_result = 0
+	document.getElementById("q5a").setAttribute("value", q5_a_result.toPrecision(3) + " m");
 }
