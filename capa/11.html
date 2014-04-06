@@ -104,6 +104,7 @@
 			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
 			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />
 		</p>
+
 	</div>
 
 	<div id="slide3">
@@ -194,25 +195,22 @@
 
 		<h1 id="q6">Question 6</h1>
 		<p>
-			Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.
+			<!--
+			Angles of triangle <input type="number" value="45" id="q6_ang1" />&deg;</br>
+				<input type="number" value="45" id="q6_ang2" />&deg;</br>
+				<input type="number" value="90" id="q6_ang3" />&deg;</br>
+			-->
+			n Outside Triangle <input type="number" value="1" id="q6_n" /></br>
+			n<sub>1</sub> Inside Triangle <input type="number" id="q6_n1" /></br>
+			Angle of light Hitting Triangle from Normal <input type="number" id="q6_ang4" />&deg;</br>
 		</p>
-		<p>
-			Mass of Sun <input type="number" value="1.99e30" id="q6_mass_s" />kg</br>
-			Distance of Sun <input type="number" id="q6_r_s" />million km</br>
-			Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
-			Mass of Earth <input type="number" value="5.97e24" id="q6_mass_e" />kg</br>
-			Radius of Earth <input type="number" value="6370" id="q6_r_e" />km</br>
-			Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
-			Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
-			Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
-		</p>
-		<button onclick="question6()">Calculate</button>
+		<button onclick="question6(); showHide();">Calculate</button>
 		<p>
 			answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
 			answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
 			answer to c: <input id="q6c" onclick="SelectAll('q6c');" readonly /></br>
-			answer to d: <input id="q6d" onclick="SelectAll('q6d');" readonly /></br>
-			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br></br>
+			answer to d: <span id="hiding" style="display:none; inline-block;">Yes</span></br>
+			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly />
 		</p>
 	</div>
 

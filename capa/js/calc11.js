@@ -5,6 +5,17 @@ function SelectAll(id){
 	document.getElementById(id).select();
 	}
 
+function showHide(){
+	var e = document.getElementById("hiding");
+		/*if(e.style.display == "block") {
+			e.style.display = "none";
+		}
+		else {*/
+			e.style.display = "block";
+		//}
+}
+
+
 function question1(){
 	var q1_lightw = document.getElementById("q1_lightw").value;
 	var q1_intmin = document.getElementById("q1_intmin").value;
@@ -48,11 +59,22 @@ function question4(){
 }
 
 function question5(){
-	var q5_n1 = 1.31
-	var q5_n2 = 1.46
-	var q5_w1 = 400
-	var q5_w2 = 600
-	var q5_a_result = 0
-	var q5_b_result = 0
-	document.getElementById("q5a").setAttribute("value", q5_a_result.toPrecision(3) + " m");
+	var q5_n1 = document.getElementById("q5_n1").value;
+	var q5_n2 = document.getElementById("q5_n2").value;
+	var q5_w1 = 400;
+	var q5_w2 = 600;
+	var q5_a_result = q5_w2/q5_n1;
+	var q5_b_result = 2*q5_w2/(2+0.5);
+	document.getElementById("q5a").setAttribute("value", q5_a_result.toPrecision(3) + " nm");
+	document.getElementById("q5b").setAttribute("value", q5_b_result.toPrecision(3) + " nm");
+}
+
+function question6(){
+	var q6_n = document.getElementById("q6_n").value;
+	var q6_n1 = 1.63
+	var q6_ang4 = 4
+	var q6_a_result = q6_n*Math.sin(Math.PI*0.5)/Math.sin(Math.PI*0.25)
+	var q6_b_result = 180
+	document.getElementById("q6a").setAttribute("value", q6_a_result.toPrecision(3));
+	document.getElementById("q6b").setAttribute("value", q6_b_result.toPrecision(3));
 }
