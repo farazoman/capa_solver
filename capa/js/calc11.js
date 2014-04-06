@@ -71,10 +71,17 @@ function question5(){
 
 function question6(){
 	var q6_n = document.getElementById("q6_n").value;
-	var q6_n1 = 1.63
-	var q6_ang4 = 4
-	var q6_a_result = q6_n*Math.sin(Math.PI*0.5)/Math.sin(Math.PI*0.25)
-	var q6_b_result = 180
+	var q6_n1 = document.getElementById("q6_n1").value;
+	var q6_ang4 = document.getElementById("q6_ang4").value;
+	var q6_a_result = q6_n*Math.sin(Math.PI*0.5)/Math.sin(Math.PI*0.25);
+	var q6_b_result = 180;
+	var q6_c_result = (Math.asin(Math.sin(q6_ang4*(Math.PI/180))/q6_n1))*(180/Math.PI);
+	var q6_d_result = "Yes";
+	var q6_f_result = (Math.asin(q6_n1*Math.sin((Math.PI/4)-Math.asin(1/q6_n1))))*(180/Math.PI);
 	document.getElementById("q6a").setAttribute("value", q6_a_result.toPrecision(3));
-	document.getElementById("q6b").setAttribute("value", q6_b_result.toPrecision(3));
+	document.getElementById("q6b").setAttribute("value", q6_b_result);
+	document.getElementById("q6c").setAttribute("value", q6_c_result.toPrecision(3));
+	document.getElementById("q6e").setAttribute("value", q6_b_result);
+	document.getElementById("q6f").setAttribute("value", q6_f_result.toPrecision(3));
+
 }
