@@ -15,7 +15,6 @@ function showHide(){
 		//}
 }
 
-
 function question1(){
 	var q1_lightw = document.getElementById("q1_lightw").value;
 	var q1_intmin = document.getElementById("q1_intmin").value;
@@ -83,5 +82,16 @@ function question6(){
 	document.getElementById("q6c").setAttribute("value", q6_c_result.toPrecision(3));
 	document.getElementById("q6e").setAttribute("value", q6_b_result);
 	document.getElementById("q6f").setAttribute("value", q6_f_result.toPrecision(3));
+}
 
+function question7(){
+	var q7_l1 = document.getElementById("q7_l1").value;
+	var q7_inty1 = document.getElementById("q7_inty1").value;
+	var q7_d1 = document.getElementById("q7_d1").value;
+	var q7_l2 = document.getElementById("q7_l2").value;
+	var q7_inty2 = document.getElementById("q7_inty2").value;
+	var q7_d2 = document.getElementById("q7_d2").value;
+	var q7_ang = document.getElementById("q7_ang").value;
+	var q7_result = 0
+	document.getElementById("q7_ans").setAttribute("value", q7_result + " W/m^2");
 }

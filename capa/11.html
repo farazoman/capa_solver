@@ -26,6 +26,11 @@
 		<li><a class="scroll" href="#q4">Question 4</a></li>
 		<li><a class="scroll" href="#q5">Question 5</a></li>
 		<li><a class="scroll" href="#q6">Question 6</a></li>
+		<li><a class="scroll" href="#q7">Question 7</a></li>
+		<li><a class="scroll" href="#q8">Question 8</a></li>
+		<li><a class="scroll" href="#q9">Question 9</a></li>
+		<li><a class="scroll" href="#q10">Question 10</a></li>
+		<li><a class="scroll" href="#q11">Question 11</a></li>
 	</ul>
 	</nav>
 
@@ -58,7 +63,7 @@
 
 	    if(!href) return;
 
-	    var fromTop = 70;
+	    var fromTop = 250;
 
 	    if(href.charAt(0) == "#") {
 	        var $target = $(href);
@@ -216,12 +221,110 @@
 	</div>
 
 	<div id="slide8">
+
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q7">Question 7</h1>
+		<p>
+			Wavelength of Beam 1 <input value="N/A" id="q7_l1" />nm</br>
+			Intensity I<sub>1</sub> of Beam 1 <input value="N/A" id="q7_inty1" />W/m<sup>2</sup></br>
+			Diameter of Circular Beam 1 <input value="N/A" id="q7_d1" />mm</br>
+			Wavelength of Beam 2 <input value="N/A" id="q7_l2" />nm</br>
+			Intensity I<sub>2</sub> of Beam 2 <input value="N/A" id="q7_inty2" />W/m<sup>2</sup></br>
+			Diameter of Circular Beam 2 <input value="N/A" id="q7_d2" />mm</br>
+			Angle of Beams Crossing <input value="N/A" id="q7_ang" />&deg;</br>
+		</p>
+		<button onclick="question7()">Calculate</button>
+		<p>
+			answer: <input id="q7_ans" onclick="SelectAll('q7_ans');" readonly />
+		</p>
+		<p>
+			Explanation</br>
+			The two beams (of equal amplitude) don't scatter and simply travel through eachother, so the scattered intensity is zero. 
+		</p>
+	</div>
+
+	<div id="slide9">
+
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q8">Question 8</h1>
+		<p>
+			Diameter of Tank  <input type="number" id="q8_d" />m</br>
+			Angle of Sun  <input type="number" id="q8_ang" />&deg;</br>
+		</p>
+		<button onclick="question8()">Calculate</button>
+		<p>
+			answer: <input id="q8_ans" onclick="SelectAll('q8_ans');" readonly />
+		</p>
+	</div>
+
+	<div id="slide10">
+
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q9">Question 9</h1>
+		<p>
+			Indicent Angle of Light  <input type="number" id="q9_ang" />&deg;</br>
+			Thickness of Glass  <input type="number" id="q8_t" />cm</br>
+			Indice of Refraction at (Smaller) Wavelength of <input type="number" id="q9_w1" />nm <input type="number" id="q9_ior1" /></br>
+			Indice of Refraction at (Larger) Wavelength of <input type="number" id="q9_w2" />nm <input type="number" id="q9_ior2" /></br>
+		</p>
+		<button onclick="question9()">Calculate</button>
+		<p>
+			answer: <input id="q9_ans" onclick="SelectAll('q9_ans');" readonly />
+		</p>
+	</div>
+
+	<div id="slide11">
+
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q10">Question 10</h1>
+		<p>
+			Angle of First Ray  <input type="number" id="q10_ang1" />&deg;</br>
+			Angle of Second Ray  <input type="number" id="q10_ang2" />&deg;</br>
+		</p>
+		<button onclick="question10()">Calculate</button>
+		<p>
+			answer: <input id="q10_ans" onclick="SelectAll('q10_ans');" readonly />
+		</p>
+	</div>
+
+<div id="slide12">
+
+	</div>
+
+	<div id="slide2">
+
+		<h1 id="q11">Question 11</h1>
+		<p>
+			Height of Mirror  <input type="number" id="q11_h" />m</br>
+			Distance of Woman from Mirror  <input type="number" id="q11_dw" />m</br>
+			Distance of Tree from Mirror <input type="number" id="q11_dm" />m</br>
+		</p>
+		<button onclick="question11()">Calculate</button>
+		<p>
+			answer: <input id="q11_ans" onclick="SelectAll('q11_ans');" readonly />
+		</p>
+	</div>
+
+	<div id="slide13">
 		<div>
 			<p>
 				Thanks for visiting!
 			</p>
 		</div>
 	</div>
+	
 
 </body>
 </html>

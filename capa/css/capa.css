@@ -282,6 +282,51 @@ div{
 
 #slide8{
   opacity: 0.4;
+  background: url(../imgs/prism01e.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+#slide9{
+  opacity: 0.4;
+  background: url(../imgs/nixie.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+#slide10{
+  opacity: 0.4;
+  background: url(../imgs/bokeh.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+#slide11{
+  opacity: 0.4;
+  background: url(../imgs/solareclipse.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+#slide12{
+  opacity: 0.4;
+  background: url(../imgs/plasma.jpg) 50% 0 no-repeat fixed;
+  color: #fff;
+  height: 20em;
+  padding: 20em 0 10em 0; 
+  background-size: cover;
+}
+
+#slide13{
+  opacity: 0.4;
   background: url(../imgs/dbz.jpg) 50% 0 no-repeat fixed;
   color: #fff;
   height: 20em;
