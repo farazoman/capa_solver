@@ -25,6 +25,11 @@
 	  ga('send', 'pageview');
 
 	</script>
+	<script type="text/x-mathjax-config">
+  	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
 
 </head>
 
@@ -47,6 +52,21 @@
 	</nav>
 
 <script>
+$(document).ready(function(){
+$(".toggle_container").hide(); 
+$("button.reveal").click(function(){
+    $(this).toggleClass("active").next().slideToggle("fast");
+    
+    if ($.trim($(this).text()) === 'Hide') {
+        $(this).text('Explanation');
+    } else {
+        $(this).text('Hide');        
+    }
+    
+    return false; 
+});
+ $("a[href='" + window.location.hash + "']").parent(".reveal").click();
+});
 /*	Old scrolling code
 	$(".scroll").click(function(event){
          event.preventDefault();
@@ -122,6 +142,35 @@
 			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
 			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			<b>Part a</b></br>
+			<!--The equation to find the optical path difference is $D = m\lambda$ for a maximum (where $m = 0,1,2,3...$).We can derive this to get the equation for thin film interference.</br>-->
+			The equation for thin film interference between one boundary (because the air is trapped between two sheets of glass) for a minimum is</br>
+			$2nd = m\lambda$</br>
+			Where $n$ is the index of refraction of the substance between the boundaries, $d$ is the thickness or distance, and $\lambda$ is of course the wavelength.</br>
+			We know that a certain number of interference minima can be seen, depending on the value of $m$.
+		</p>
+		<p>
+			The first minimum appears when $2nb = 0\lambda$, and so on that</br>
+			2<sup>nd</sup> min: $2nd = 1\lambda$</br>
+			3<sup>rd</sup> min: $2nd = 2\lambda$</br>
+			...<br>
+			x<sup>th</sup> min: $2nd = (x-1)\lambda$</br>
+			$m$ then simply becomes "the number of visible minima" minus 1.
+			Adjusting the equation a bit, since $n$ of the air between the glass = 1,</br>
+			$d = {(x-1)\lambda \over 2}$
+		</p>
+		<p>
+			<b>Part b</b></br>
+			Now that we know the distance between the plates, we can rearrange the above equation again to solve for $n$:</br>
+			$n = {m\lambda \over 2d}$</br>
+			Following the same reasoning as above, $m$ becomes the number of minima minus 1 again, and $d$ is the answer from part a. The value of $\lambda$ used is the same as well.
+		</p>		
+			</div>
+		</div>
 
 	</div>
 
@@ -141,6 +190,21 @@
 		<p>
 			answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			The equation for phase change at one boundary (there is a film of soap, and then air) is</br>
+			for a maximum: $2nd = {(m+{1 \over 2})\lambda}$</br>
+			for a minimum: $2nd = m\lambda$</br>
+			Where $m = 0,1,2...$</br>
+			Choosing a value of 1 for m and substituting into the 'maximum' equation, we get</br>
+			$d = {(1+{1 \over 2})600 \over 2n}$</br>
+			For a more thorough solving of this question, check page four of <a href="http://www.physics.ohio-state.edu/~fcd/133/OldSolutions/133.00S/00Sfinalwrkd.pdf">this document</a>.
+		</p>
+			
+			</div>
+		</div>
 
 	</div>
 
@@ -161,6 +225,26 @@
 			answer to a: <input id="q3a" onclick="SelectAll('q3a');" readonly /></br>
 			answer to b: <input id="q3b" onclick="SelectAll('q3b');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			<b>Part a</b></br>
+			The equation to find the thickness of an antireflection coating (destructive interference/min) is</br>
+			$d = (m-{1 \over 2}){\lambda \over 2n}$    (textbook equation 21.33)</br>
+			(where $m = 0,1,2...$)
+		</p>
+		<p>
+			<b>Part b</b></br>
+			For a wave entering a substance with a higher index of refraction (film to glass), the wavelength is shifted by $\pi$ radians, or 180 degrees, meaning that the wave is shifted twice going from air to the soap film to the sheet of glass.  The new maximum wavelength of reflection then becomes $\lambda \over 2$.
+		</p>
+		<p>
+				To be a little more explicit, because of the double phase shift, the path that the wave takes through the film/soap combination is 1 wavelength instead of half that. You can solve for this using the above equation by taking away the $1 \over 2$ in the equation from part a:</br>
+				$d = (m-{1 \over 2}){\lambda \over n}$</br>
+				If you solve for $\lambda$ using a value of 1 for $m$, the $d$ found from part a and the $n$ of air, a value of $\lambda \over 2$ should be found.
+		</p>
+			</div>
+		</div>
 
 	</div>
 
@@ -181,6 +265,20 @@
 		<p>
 			answer: <input id="q4_ans" onclick="SelectAll('q4_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>
+			The equation to find the thickness of a film using the maximum is</br>
+			$d = {m\lambda \over 2n}$ (derived from textbook equation 21.32).</br>
+			The index of refraction of ocean water isn't actually necessary for the calculation, however it does show that since the ior of air < oil< water, there is a change in phase (as explained in question 3). The textbook equation already reflects this double phase change.</br>
+			Since the given wavelength occurs at a first order maximum, a value of $m = 1$ is used.</br>
+			$\lambda$ is converted from nm into m by multiplying by 10<sup>-9</sup>, to give the thickness of the oil layer in metres.</br>
+			Finally, the volume is divided by the thickness to recieve a surface area:</br>
+			${V (m^3) \over d (m)} = A (m^2)$
+		</p>
+			</div>
+		</div>
 
 	</div>
 	
@@ -254,10 +352,14 @@
 		<p>-->
 			answer: <input id="q7_ans" value="0.00 W/m^2" onclick="SelectAll('q7_ans');" readonly />
 		</p>
-		<!--<p>
-			Explanation</br>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
 			The two beams (of equal amplitude) don't scatter and simply travel through eachother, so the scattered intensity is zero. 
-		</p>-->
+		</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="slide9">

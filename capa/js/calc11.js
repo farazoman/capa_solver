@@ -52,7 +52,7 @@ function question4(){
 	var q4_ior_o = document.getElementById("q4_ior_o").value;
 	var q4_vol = document.getElementById("q4_vol").value;
 	var q4_lambda = document.getElementById("q4_lambda").value;
-	var q4_ior_w = document.getElementById("q4_result").value;
+	var q4_ior_w = document.getElementById("q4_ior_w").value;
 	var q4_result = 2*q4_vol*q4_ior_o/(q4_lambda*Math.pow(10,-9));
 	document.getElementById("q4_ans").setAttribute("value", q4_result.toPrecision(3) + " m^2");
 }
