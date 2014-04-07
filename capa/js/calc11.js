@@ -95,3 +95,20 @@ function question7(){
 	var q7_result = 0
 	document.getElementById("q7_ans").setAttribute("value", q7_result + " W/m^2");
 }
+
+function question8(){
+	var q8_d = document.getElementById("q8_d").value;
+	var q8_ang = document.getElementById("q8_ang").value;
+	var q8_result = q8_d/Math.tan(Math.asin((Math.sin(Math.PI/2-(Math.PI/180)*q8_ang))/1.33));
+	document.getElementById("q8_ans").setAttribute("value", q8_result.toPrecision(3) + " m");
+}
+
+function question9(){
+	var q9_ang = 26.4
+	var q9_t = 5.19
+	var q9_w1 = 410
+	var q9_ior1 = 1.695
+	var q9_w2 = 680
+	var q9_ior2 = 1.643
+	var q9_result =
+}
