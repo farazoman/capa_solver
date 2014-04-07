@@ -104,11 +104,27 @@ function question8(){
 }
 
 function question9(){
-	var q9_ang = 26.4
-	var q9_t = 5.19
-	var q9_w1 = 410
-	var q9_ior1 = 1.695
-	var q9_w2 = 680
-	var q9_ior2 = 1.643
-	var q9_result =
+	var q9_ang = document.getElementById("q9_ang").value;
+	var q9_t = document.getElementById("q9_t").value;
+	var q9_w1 = document.getElementById("q9_w1").value;
+	var q9_ior1 = document.getElementById("q9_ior1").value;
+	var q9_w2 = document.getElementById("q9_w2").value;
+	var q9_ior2 = document.getElementById("q9_ior2").value;
+	var q9_result = ((q9_t*Math.tan(Math.asin(Math.sin(q9_ang*(Math.PI/180))/q9_ior2)))-(q9_t*Math.tan(Math.asin(Math.sin(q9_ang*(Math.PI/180))/q9_ior1))))*Math.cos(q9_ang*(Math.PI/180));
+	document.getElementById("q9_ans").setAttribute("value", q9_result.toPrecision(3) + " cm");
+}
+
+function question10(){
+	var q10_ang1 = document.getElementById("q10_ang1").value;
+	var q10_ang2 = document.getElementById("q10_ang2").value;
+	var q10_result = q10_ang2-q10_ang1;
+	document.getElementById("q10_ans").setAttribute("value", q10_result.toPrecision(3) + " deg");
+}
+
+function question11(){
+	var q11_h = 0.6
+	var q11_dw = 1.45
+	var q11_dm = 17.8
+	var q11_result = 0
+	document.getElementById("q11_ans").setAttribute("value", q11_result.toPrecision(3) + " m");
 }
