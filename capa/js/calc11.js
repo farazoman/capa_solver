@@ -122,9 +122,9 @@ function question10(){
 }
 
 function question11(){
-	var q11_h = 0.6
-	var q11_dw = 1.45
-	var q11_dm = 17.8
-	var q11_result = 0
-	document.getElementById("q11_ans").setAttribute("value", q11_result.toPrecision(3) + " m");
+	var q11_h = document.getElementById("q11_h").value;
+	var q11_dw = document.getElementById("q11_dw").value;
+	var q11_dm = document.getElementById("q11_dm").value;
+	var q11_result = (q11_dm+q11_dw)*q11_h/q11_dw
+	document.getElementById("q11_ans").setAttribute("value", q11_result.toPrecision(2) + " m");
 }
