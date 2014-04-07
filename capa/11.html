@@ -25,7 +25,7 @@
 	  ga('send', 'pageview');
 
 	</script>
-	
+
 </head>
 
 <body>
@@ -226,7 +226,7 @@
 			answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
 			answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
 			answer to c: <input id="q6c" onclick="SelectAll('q6c');" readonly /></br>
-			answer to d: <span id="hiding" style="display:none; inline-block;">Yes</span></br>
+			answer to d: Yes<!--<span id="hiding" style="display:none; inline-block;">Yes</span>--></br>
 			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br>
 			answer to f: <input id="q6f" onclick="SelectAll('q6f');" readonly />
 		</p>
@@ -240,7 +240,8 @@
 
 		<h1 id="q7">Question 7</h1>
 		<p>
-			Wavelength of Beam 1 <input value="N/A" id="q7_l1" />nm</br>
+			Note: entering values is not required</br>
+			<!--Wavelength of Beam 1 <input value="N/A" id="q7_l1" />nm</br>
 			Intensity I<sub>1</sub> of Beam 1 <input value="N/A" id="q7_inty1" />W/m<sup>2</sup></br>
 			Diameter of Circular Beam 1 <input value="N/A" id="q7_d1" />mm</br>
 			Wavelength of Beam 2 <input value="N/A" id="q7_l2" />nm</br>
@@ -249,8 +250,8 @@
 			Angle of Beams Crossing <input value="N/A" id="q7_ang" />&deg;</br>
 		</p>
 		<button onclick="question7()">Calculate</button>
-		<p>
-			answer: <input id="q7_ans" onclick="SelectAll('q7_ans');" readonly />
+		<p>-->
+			answer: <input id="q7_ans" value="0.00 W/m^2" onclick="SelectAll('q7_ans');" readonly />
 		</p>
 		<!--<p>
 			Explanation</br>
@@ -283,6 +284,7 @@
 
 		<h1 id="q9">Question 9</h1>
 		<p>
+			Note: writing values of wavelengths is not required</br>
 			Indicent Angle of Light  <input type="number" id="q9_ang" />&deg;</br>
 			Thickness of Glass  <input type="number" id="q9_t" />cm</br>
 			Indice of Refraction at (Smaller) Wavelength of <input value="~400" id="q9_w1" />nm <input type="number" id="q9_ior1" /></br>
