@@ -300,6 +300,27 @@ $("button.reveal").click(function(){
 			answer to a: <input id="q5a" onclick="SelectAll('q5a');" readonly /></br>
 			answer to b: <input id="q5b" onclick="SelectAll('q5b');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>
+			<b>Part a</b></br>
+			Recall the equation to find the thickness of a thin film with a known maximum wavelength.</br>
+			$d = {m\lambda \over 2n}$ (derived from textbook equation 21.32).</br>
+			Like question 4, the index of refraction of glass is not necessary for the calculation, but shows that there is a double phase shift.</br>
+			Using a value of $m = 2$, the equation simplifies to</br>
+			$d = {\lambda \over n}$ Where $n$ is the index of refraction of the coating material, and $\lambda$ is 600 nm.
+		</p>
+		<p>
+			<b>Part b</b></br>
+			Using the equation for phase change at a minimum:</br>
+			$2nd = (m+{1 \over 2})\lambda$</br>
+			Using a value of $m = 2$, and knowing that $d = {600 \over n}$, the equation simplifies to</br>
+			$\lambda = {2(600) \over (2 + {1 \over 2})} = 480 nm$.</br>
+			<!--Seems like if everyone gets the same wavelength boundaries, then the answer to part b is the same for everyone!-->
+		</p>
+			</div>
+		</div>
 
 	</div>
 
@@ -329,6 +350,51 @@ $("button.reveal").click(function(){
 			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br>
 			answer to f: <input id="q6f" onclick="SelectAll('q6f');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>
+			<b>Part a</b></br>
+			The equation for total internal reflection is derived from Snell's law, and is as follows:</br>
+			$n_1 sin (\theta) = n_2 sin (90^{\circ})$</br>
+			There is no change in direction of the incident light when it enters the hypotenuse of the prism because it is normal to the edge of entry (therefore, snell's law dictates that there is no bending of the light). Because of this, the light, after entering the prism, hits the opposite edge at an angle that is 45&deg; from the normal of that edge. We can then therefore replace $\theta$ with 45&deg;, and n<sub>t</sub> with 1 (since that is the ior of the air around the prism) and solve for n<sub>i</sub>:</br>
+			$n_1 = {sin(90^{\circ}) \over sin(45^{\circ})}$ which is just $\sqrt{2}$
+		</p>
+		<p>
+			<b>Part b</b></br>
+			Refer to the picture slide below. We calculated in part a that light will totally internally reflect off the back side as long as the ior of the prism glass was higher than 1.41, which it is, in this case. Since the triangle is isoceles and symmetrical, no matter where the beam is placed, as long as it enters normal to the hypotenuse, there will be total internal reflection and the beam will exit from the hypotenuse in the opposite direction that it entered, i.e. 180&deg;.
+		<p>
+			<b>Part c</b></br>
+			Use Snell's Law:</br>
+			${sin(\theta_1) \over sin(\theta_2)} = {n_2 \over n_1}$</br>
+			Where $n_1$ is the ior of the surroundings (assuming air, n=1), $\theta_1$ is the angle from the normal of entry, and $n_2$ is the ior of the glass prism. The equation then becomes</br>
+			$\theta_2 = {arcsin({sin(\theta_1) \over n_2})}$
+		</p>
+		<p>
+			<b>Part d</b></br>
+			To determine whether the beam actually internally reflects at all if it enters at the angle given in Part c, we can use Snell's law again to attempt to find what angle the beam will exit the other end of the prism.</br>
+			The angle that is normal to the 45&deg; back edge (hereby named $\theta_{glass}$) will be 45&deg; minus the angle found in Part c (refer to diagram in part f for a clearer visual representation of this)</br>
+			The equation to be used then becomes this:</br>
+			$\theta_{air} = {arcsin(n_{glass} sin(\theta_{glass}))}$</br>
+			You can try using this equation with your own numbers, but knowing that the answer from part c was probably very small, and the ior of the prism is greater than 1.41, there ends up being an error because we are trying to calculate the arcsin of a value greater than the domain of definition of arcsin. Therefore the light must be undergoing total internal reflection, and considering the symmetrical properties of the prism, reflects off of the other back edge as well.
+		</p>
+		<p>
+			<b>Part e</b></br>
+			If the light internally reflects off of both back surfaces, then the situation becomes fairly similar to Part b. With respect to the angle of the incoming light, there is once again a 180&deg; turnaround for the beam.
+		</p>
+		<p>
+			<b>Part f</b></br>
+			For the light to experience total internal reflection, refer back to the equation used in Part a:</br>
+			$n_{glass} sin (\theta_{glass}) = n_{air} sin (90^{\circ})$</br>
+			Rearrange the equation to find the greatest possible angle the light must hit the back edge to experience total internal reflection:</br>
+			$\theta_{glass} = {arcsin({sin(90^{\circ}) \over n_{glass}})}$</br>
+			To find the angle normal to the hypotenuse of the prism, take 45&deg; (which is the angle between the normal of the back edge and the normal of the hypotenuse) and subtract $\theta_{glass}$ from it.</br>
+			This angle (labeled $\theta_2$ on diagram) is the greatest angle that the light can be bent from the normal on entering the prism glass. Knowing this angle, use Snell's Law again to find the angle of entry.</br>
+			$ \theta = {arcsin({n_{glass} sin(\theta_2) \over n_{air}})}$
+		</p>
+			</div>
+		</div>
+
 	</div>
 
 	<div id="slide8">
@@ -356,7 +422,7 @@ $("button.reveal").click(function(){
 		<div class="toggle_container">
 			<div class="block">
 		<p>	
-			The two beams (of equal amplitude) don't scatter and simply travel through eachother, so the scattered intensity is zero. 
+			The two beams (of equal amplitude) simply travel through eachother (there is no scattering), so the scattered intensity is zero. 
 		</p>
 			</div>
 		</div>
