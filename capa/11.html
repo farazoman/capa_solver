@@ -384,6 +384,7 @@ $("button.reveal").click(function(){
 		</p>
 		<p>
 			<b>Part f</b></br>
+			<img src="imgs/capa11_q6.jpg" alt="q6 diagram" width="400"></br>
 			For the light to experience total internal reflection, refer back to the equation used in Part a:</br>
 			$n_{glass} sin (\theta_{glass}) = n_{air} sin (90^{\circ})$</br>
 			Rearrange the equation to find the greatest possible angle the light must hit the back edge to experience total internal reflection:</br>
@@ -443,6 +444,19 @@ $("button.reveal").click(function(){
 		<p>
 			answer: <input id="q8_ans" onclick="SelectAll('q8_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			<img src="imgs\capa11_q8.jpg" alt="q8 diagram" width="400"></br>
+			Refer to the above diagram. To find the angle of incidence ($\theta_i$ on diagram), the angle of the sun from the horizon is subtracted from 90&deg;.</br>
+			We can then use Snell's Law to solve for the angle of refraction, knowing that the ior of air is 1, and the ior of water is 1.33.</br>
+			$\theta_r = {arcsin({sin(\theta_i) \over 1.33})}$</br>
+			Since the ray of sunlight and the cross section of the cylindrical tank make a right angle triangle, tangent can be used to find the adjacent dimension.</br>
+			${d \over tan(\theta_r)} = h$ 
+		</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="slide10">
@@ -463,6 +477,22 @@ $("button.reveal").click(function(){
 		<p>
 			answer: <input id="q9_ans" onclick="SelectAll('q9_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			<img src="imgs\capa11_q9.jpg" alt="q9 diagram" width="500"></br>
+			Assume that the wavelengths given are the upper and lower boundaries of the visible white light. Since there is a different index of refraction for the glass depending on the wavelength of light, the two angles of refraction need to be calculated separately, using Snell's Law.</br>
+			Use $\theta_{r1} = {arcsin({sin(\theta_i) \over n_{\lambda_s}})}$ for the smaller angle, and similarly use $\theta_{r2} = {arcsin({sin(\theta_i) \over n_{\lambda_l}})}$ for the larger angle.<br>
+			Looking at the line normal to the slab of glass, one can notice that it makes a right angle triangle, with the difference of the dimensions of the side opposite to the angles of refraction being the width of the beam within the slab of glass. We can therefore use tangent to solve for these dimensions, as the width of the adjacent side is the thickness of the slab.</br>
+			$w_{inglass} = {d tan(\theta_{r2}) - d tan(\theta_{r1})}$</br>
+			If we draw a line through the bottom bound of the exiting beam to make a right angle triangle, we can solve for the final width of the exiting beam.</br>
+			<img src="imgs\capa11_q9z.jpg" alt="q9 diagram zoomed" width="200"></br>
+			Using Snell's Law, the exiting beam can be calcluated (or reasoned) to be same angle from the normal as it was on entry, so that we can solve for all the angles of the little right triangle. The top angle is 90&deg; minus $\theta_i$, so through convention (all angles in a triangle must add up to 180&deg;) the bottom angle is the same as $\theta_i$. We can proceed to use cosine to find the dimensions of the adjacent side:</br>
+			$w = {w_{inglass} cos(\theta_i)}$
+		</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="slide11">
@@ -480,6 +510,15 @@ $("button.reveal").click(function(){
 		<p>
 			answer: <input id="q10_ans" onclick="SelectAll('q10_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			The Law of Reflection dictates that $\theta_i = \theta_r$. Both angles will reflect off at the same angle they hit the mirror at with respect to the normal, so the angle between them is the difference between the larger angle and the smaller one.</br>
+			$\theta_{diff} = {\theta_2 - \theta_1}$
+		</p>
+			</div>
+		</div>
 	</div>
 
 <div id="slide12">
@@ -498,6 +537,19 @@ $("button.reveal").click(function(){
 		<p>
 			answer: <input id="q11_ans" onclick="SelectAll('q11_ans');" readonly />
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			The magnification equation dictates that</br>
+			$M = {h \over h_0}$ and $M = {d \over d_0}$, where $h_0$ is the object's actual height, and $h$ is the image's height.
+			M is equal to 1 for plane mirrors, and the equations can be equated so that</br>
+			${h \over h_0} = {d \over d_0}$.</br>
+			Since the tree fills the entire mirror, the height of the image ($h$) is the height of the mirror. The distance to the object ($d_0$) is the distance from the tree to the mirror ($l$) plus the distance from the mirror to the observer's eye ($d$), so after rearranging the magnification equation to solve for $h_0$, the height of the tree is</br>
+			$h_0 = {h(l+d) \over d}$
+		</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="slide13">
