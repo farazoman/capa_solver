@@ -1,4 +1,5 @@
 //Capa 11 testing
+//Click "explanation" in the html webpage for clearer equations and visuals
 
 function SelectAll(id){
 	document.getElementById(id).focus();
