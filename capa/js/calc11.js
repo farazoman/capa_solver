@@ -30,7 +30,8 @@ function question2(){
 	var q2_intmax = document.getElementById("q2_intmax").value;
 	var q2_intmin = document.getElementById("q2_intmin").value;
 	var q2_n = document.getElementById("q2_n").value;
-	var q2_result = 1.5*q2_intmax/(2*q2_n);
+	var q2_m = (q2_intmin-(q2_intmax*0.5))/(q2_intmax-q2_intmin)
+	var q2_result = (q2_m+0.5)*q2_intmax/(2*q2_n);
 	document.getElementById("q2_ans").setAttribute("value", q2_result.toPrecision(3) + " nm");
 }
 

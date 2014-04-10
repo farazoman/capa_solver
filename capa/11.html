@@ -182,8 +182,8 @@ $("button.reveal").click(function(){
 
 		<h1 id="q2">Question 2</h1>
 		<p>
-			Maximum Interference <input type="number" value="600" id="q2_intmax" />nm</br>
-			Minimum Interference <input type="number" value="450" id="q2_intmin" />nm</br>
+			Maximum Interference <input type="number" id="q2_intmax" />nm</br>
+			Minimum Interference <input type="number" id="q2_intmin" />nm</br>
 			n of the film <input type="number" id="q2_n" /></br>
 		</p>
 		<button onclick="question2()">Calculate</button>
@@ -198,8 +198,12 @@ $("button.reveal").click(function(){
 			for a maximum: $2nd = {(m+{1 \over 2})\lambda}$</br>
 			for a minimum: $2nd = m\lambda$</br>
 			Where $m = 0,1,2...$</br>
-			Choosing a value of 1 for m and substituting into the 'maximum' equation, we get</br>
-			$d = {(1+{1 \over 2})600 \over 2n}$</br>
+			Equate these two equations to first solve for m.</br>
+			${(m+{1 \over 2})} {\lambda_{min} \over 2n }= {{(m+1)} {\lambda_{max} \over 2n}}$</br>
+			rearrange:</br>
+			It seems that the value for m for a min becomes m+1 because the 'm' needs to be adjacent.</br>
+			$m = {{\lambda_{min}-{{1\over 2} \lambda_{max}}}\over {\lambda_{max}-\lambda_{min}}}$</br>
+			now that $n$ has been found, simply substitute the value of $n$ into either max/min equation to find the thickness. Everything should check out if they're equal.</br>
 			For a more thorough solving of this question, check page four of <a href="http://www.physics.ohio-state.edu/~fcd/133/OldSolutions/133.00S/00Sfinalwrkd.pdf">this document</a>.
 		</p>
 			
@@ -236,7 +240,7 @@ $("button.reveal").click(function(){
 		</p>
 		<p>
 			<b>Part b</b></br>
-			For a wave entering a substance with a higher index of refraction (film to glass), the wavelength is shifted by $\pi$ radians, or 180 degrees, meaning that the wave is shifted twice going from air to the soap film to the sheet of glass.  The new maximum wavelength of reflection then becomes $\lambda \over 2$.
+			For a wave reflecting from a substance with a higher index of refraction (film to glass), the wavelength is shifted by $\pi$ radians, or 180 degrees, meaning that the wave is shifted twice going from air to the soap film to the sheet of glass.  The new maximum wavelength of reflection then becomes $\lambda \over 2$.
 		</p>
 		<p>
 				To be a little more explicit, because of the double phase shift, the path that the wave takes through the film/soap combination is 1 wavelength instead of half that. You can solve for this using the above equation by taking away the $1 \over 2$ in the equation from part a:</br>
