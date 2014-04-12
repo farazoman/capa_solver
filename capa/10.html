@@ -43,6 +43,21 @@
 	</nav>
 
 <script>
+$(document).ready(function(){
+$(".toggle_container").hide(); 
+$("button.reveal").click(function(){
+    $(this).toggleClass("active").next().slideToggle("fast");
+    
+    if ($.trim($(this).text()) === 'Hide') {
+        $(this).text('Explanation');
+    } else {
+        $(this).text('Hide');        
+    }
+    
+    return false; 
+});
+ $("a[href='" + window.location.hash + "']").parent(".reveal").click();
+});
 /*	Old scrolling code
 	$(".scroll").click(function(event){
          event.preventDefault();
@@ -121,6 +136,14 @@
 			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
 			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s
 		</p>
+		<button class="reveal">Explanation</button>
+		<div class="toggle_container">
+			<div class="block">
+		<p>	
+			<b>Part a</b></br>
+		</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="slide3">
