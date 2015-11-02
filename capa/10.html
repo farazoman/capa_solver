@@ -4,7 +4,7 @@
 <head>
 	<title>Phys 142 CAPA 10</title>
 	<link rel="stylesheet" type="text/css" href="css/capa.css">
-    <link rel="shortcut icon" href="./imgs/capa.ico" >
+    <link rel="shortcut icon" href="./imgs/hci_logo.ico" >
 	<script src="js/calc.js" type="text/javascript" ></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -32,13 +32,13 @@
 
 	<nav>
 	<ul>
-		<li><a class="scroll" href='#top'><img src='./imgs/capa.ico' style='margin-top: .8em'/></a></li>
-		<li><a class="scroll" href="#q1">Question 1</a></li>
-		<li><a class="scroll" href="#q2">Question 2</a></li>
-		<li><a class="scroll" href="#q3">Question 3</a></li>
-		<li><a class="scroll" href="#q4">Question 4</a></li>
-		<li><a class="scroll" href="#q5">Question 5</a></li>
-		<li><a class="scroll" href="#q6">Question 6</a></li>
+		<li><a class="scroll" href='#top'><img src='./imgs/hci_logo.ico' style='margin-top: .8em'/></a></li>
+		<li><a class="scroll" href="#q1">Project Proposal</a></li>
+		<li><a class="scroll" href="#q2">Lo-fi</a></li>
+		<li><a class="scroll" href="#q3">Hi-fi Computer Prototype 3</a></li>
+		<li><a class="scroll" href="#q4">Formative Feedbacke</a></li>
+		<li><a class="scroll" href="#q5">Alpha</li>
+		<li><a class="scroll" href="#q6">Beta</a></li>
 	</ul>
 	</nav>
 
@@ -110,37 +110,23 @@ $("button.reveal").click(function(){
 		<p id="top"></p>
 	<div id="slide1">
 		<div id='opaque'>
-		<p><b>CAPA 10</b></p>
+		<p><b>Campus Navigator</b></p>
 		<p>
-		Enter your given CAPA values, and click 'Calculate' to recieve the result.</br>
-		When entering values 'e' notation is acceptable but doing '*10^2' is not.
-		The purpose of this resource is for referencing when studying.
+		McGill University, located in the heart of downtown Montreal at the foot of Mont Royal. It covers over 80 acres of land, including 13 libraries, 48 department buildings and 5 museums. In 2012, McGill’s campus was even rated as one of the 17 most beautiful university campuses. Millions of tourists are attracted to Montreal, and one of the famous spots must be McGill University. But, how to explore this place? There are maps of campus available but efficency is still a problem.
 		</p>
 		</div>
 	</div>
-	
+	<div></div>
 	<div id="slide2">
 
-		<h1 id="q1">Question 1</h1>
+		<h1 id="q1">Prjoect Proposal</h1>
 		<p>
-			Warning: Question 1 has been fixed, however these results may differ from the computer's answer, and therefore may not be accepted.
+		
+
+
 	    </p>
-		<p>
-			Intensity <input type="number" id="q1_inty" />W/m<sup>2</sup></br>
-			Dimension 1 <input type="number" id="q1_d1" />cm</br>
-			Dimension 2 <input type="number" id="q1_d2" />cm</br>
-			Time <input type="number" id="q1_time" />min</br>
-		</p>
-		<button onclick="question1()">Calculate</button>
-		<p>
-			answer to a: <input type="text" id="q1a" onclick="SelectAll('q1a');" readonly /></br>
-			answer to b: <input id="q1b" onclick="SelectAll('q1b');" readonly />or N s
-		</p>
-		<button class="reveal">Explanation</button>
-		<div class="toggle_container">
-			<div class="block">
-		<p>	
-			<b>Part a</b></br>
+		
+		
 		</p>
 			</div>
 		</div>
@@ -152,23 +138,11 @@ $("button.reveal").click(function(){
 
 	<div id="slide2">
 
-		<h1 id="q2">Question 2</h1>
+		<h1 id="q2">First Prototype</h1>
 		<p>
-			*There is an error in the writing of the question, the intensity is written as W/m<sup>3</sup>, interpret it as m<sup>2</sup>.
+			
 		</p>
-		<p>
-			Intensity <input type="number" id="q2_inty" />W/m<sup>2</sup></br>
-			Percent Energy Reaching Earth's Surface <input type="number" id="q2_pcES" />%</br>
-			Percent Energy Absorbed <input type="number" id="q2_pcAB" />%</br>
-			Time <input type="number" id="q2_time" />min</br>
-			Dimension 1 <input type="number" id="q2_d1" />m</br>
-			Dimension 2 <input type="number" id="q2_d2" />m</br>
-			Elevation of the Sun <input type="number" id="q2_theta" />&deg; (degrees)</br>
-		</p>
-		<button onclick="question2()">Calculate</button>
-		<p>
-			answer: <input id="q2_ans" onclick="SelectAll('q2_ans');" readonly />
-		</p>
+		
 
 	</div>
 
@@ -178,22 +152,50 @@ $("button.reveal").click(function(){
 
 	<div id="slide2">
 
-		<h1 id="q3">Question 3</h1>
-		<p>
-			Diameter of Mirror <input type="number" id="q3_mirrord" />m</br>
-			Radius of Absorbing Plate <input type="number" id="q3_plater" />cm</br>
-			Volume <input type="number" id="q3_volume" />L</br>
-			Temperature <input type="number" value="20.0" id="q3_temp" />&deg;C</br>
-			Intensity <input type="number" id="q3_inty" />kW/m<sup>2</sup></br>
-			Percent Energy Absorbed <input type="number" id="q3_pcabs" />%</br>
-		</p>
-		<button onclick="question3()">Calculate</button>
-		<p>
-			answer to a: <input id="q3a" onclick="SelectAll('q3a');" readonly /></br>
-			answer to b: <input id="q3b" onclick="SelectAll('q3b');" readonly /></br>
-			answer to c: <input id="q3c" onclick="SelectAll('q3c');" readonly /></br>
-			answer to d: <input id="q3d" onclick="SelectAll('q3d');" readonly />
-		</p>
+		<h1>User Manual:</h1>
+
+		<h1>Design Evolution:</h1>(Yinuo)
+
+		
+(both on app and as a separate doc) //DONE but needs pictures and formatting 
+		(Three or more insightful and specific changes were made to the design based on feedback as well as new insights from the designers. For every change made to the design from the point of the low-fidelity prototype, these decisions were justified from the perspective of usability or feasibility.)
+A
+b
+c
+
+<h1>Prototype video, pics & more:</h1>
+	//TODO Include that here
+
+<h1>User Population</h1> (Yinou)
+(describe the users to test and it should correspond to the user segments in the project proposal)
+
+<h1>Usability Goals:</h1> //NOTE do we have to use user or application?
+(Link it to a quantitative measurement)
+<txt>
+The user is able to understand the application with minimum difficulties</br>
+</br>The user is able to use all the features within 3 minutes</br>
+</br>The user is able to navigate to their destination. Without getting lost.</br>
+</br>Given two places are x km apart, and average walking speed 5 km/hr the user should get to their destination within x/5 hrs 30 secs. </br>
+</br>The application does not influence the perception of surroundings.</br>
+</br>The user can get to their destination without bumping into any objects, including people</br>
+</br>The user can select a location within a specific category </br>
+</br>This needs to be accomplished within 30 seconds to be successful and the number of times the user backtracks needs to be recorded</br>
+</br>The user is able to obtain more information about a location</br>
+</br>Keep track of the times a user backtracks and indicate each time they think something will give them more information and where this occurred.</br>
+</br>The search bar can be easily identified and used without trouble</br>
+</br>When telling the user to use the search bar, they should immediately select the search bar and within 15 seconds should find their assigned location</br>
+</txt>
+<h1>Usability Test Procedure:</h1>
+</br>(address > 6  of the questions from the rubric)
+ 
+<h1>Reporting Info:</h1>
+(Include documents to help for recording info)
+
+
+<h1>Usability Evaluation:</h1>
+(refer to rubric)
+
+
 
 	</div>
 
@@ -203,20 +205,9 @@ $("button.reveal").click(function(){
 
 	<div id="slide2">
 
-		<h1 id="q4">Question 4</h1>
+		<h1 id="q4">Formative Feedback</h1>
 		<p>
-			Frequency of Radiation <input type="number" id="q4_freq" />GHz</br>
-			Length of Pulse <input type="number" id="q4_pulse_t" />ns</br>
-			Radius of Parabolic Reflector <input type="number" id="q4_parab_R" />cm</br>
-			Power <input type="number" id="q4_power" />kW</br>
-		</p>
-		<button onclick="question4()">Calculate</button>
-		<p>
-			answer to a: <input id="q4a" onclick="SelectAll('q4a');" readonly /></br>
-			answer to b: <input id="q4b" onclick="SelectAll('q4b');" readonly /></br>
-			answer to c: <input id="q4c" onclick="SelectAll('q4c');" readonly /></br>
-			answer to d: <input id="q4d" onclick="SelectAll('q4d');" readonly />or N/C</br>
-			answer to e: <input id="q4e" onclick="SelectAll('q4e');" readonly />
+			
 		</p>
 
 	</div>
@@ -227,25 +218,9 @@ $("button.reveal").click(function(){
 
 	<div id="slide2">
 
-		<h1 id="q5">Question 5</h1>
+		<h1 id="q5">Alpha Implementation</h1>
 		<p>
-			Intensity <input type="number" id="q5_inty" />W/m<sup>2</sup></br>
-			b: Number of (inserted) polarizers <input type="number" value="1" id="q5_bnum" /></br>
-			b: Angle of polarizer(s) <input type="number" value="45" id="q5_angle_b" />&deg;</br>
-			c: Number of polarizers <input type="number" value="2" id="q5_cnum" /></br>
-			c: Angle of polarizers <input type="number" value="30" id="q5_angle_c" />&deg;</br>
-			d: Number of polarizers <input type="number" value="5" id="q5_dnum" /></br>
-			d: Angle of polarizers <input type="number" value="15" id="q5_angle_d" />&deg;</br>
-			e: Number of polarizers <input type="number" value="17" id="q5_enum" /></br>
-			e: Angle of polarizers <input type="number" value="5" id="q5_angle_e" />&deg;
-		</p>
-		<button onclick="question5()">Calculate</button>
-		<p>
-			answer to a: <input id="q5a" onclick="SelectAll('q5a');" readonly /></br>
-			answer to b: <input id="q5b" onclick="SelectAll('q5b');" readonly /></br>
-			answer to c: <input id="q5c" onclick="SelectAll('q5c');" readonly /></br>
-			answer to d: <input id="q5d" onclick="SelectAll('q5d');" readonly /></br>
-			answer to e: <input id="q5e" onclick="SelectAll('q5e');" readonly />
+			
 		</p>
 
 	</div>
@@ -256,28 +231,12 @@ $("button.reveal").click(function(){
 
 	<div id="slide2">
 
-		<h1 id="q6">Question 6</h1>
+		<h1 id="q6">Beta Implementation</h1>
 		<p>
-			Enter large values with e, ex. 1.2&times;10<sup>5</sup> is 1.2e5.
+			
 		</p>
-		<p>
-			Mass of Sun <input type="number" value="1.99e30" id="q6_mass_s" />kg</br>
-			Distance of Sun <input type="number" id="q6_r_s" />million km</br>
-			Intensity of Sun <input type="number" id="q6_inty" />W/m<sup>2</sup></br>
-			Mass of Earth <input type="number" value="5.97e24" id="q6_mass_e" />kg</br>
-			Radius of Earth <input type="number" value="6370" id="q6_r_e" />km</br>
-			Area of Solar Sail <input type="number" id="q6_area" />m<sup>2</sup></br>
-			Density of Solar Sail <input type="number" id="q6_density" />kg/m<sup>3</sup></br>
-			Thickness of Solar Sail <input type="number" id="q6_thick" />m</br>
-		</p>
-		<button onclick="question6()">Calculate</button>
-		<p>
-			answer to a: <input id="q6a" onclick="SelectAll('q6a');" readonly /></br>
-			answer to b: <input id="q6b" onclick="SelectAll('q6b');" readonly /></br>
-			answer to c: <input id="q6c" onclick="SelectAll('q6c');" readonly /></br>
-			answer to d: <input id="q6d" onclick="SelectAll('q6d');" readonly /></br>
-			answer to e: <input id="q6e" onclick="SelectAll('q6e');" readonly /></br></br>
-		</p>
+		
+		
 	</div>
 
 	<div id="slide13">

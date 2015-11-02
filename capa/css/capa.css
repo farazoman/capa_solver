@@ -38,6 +38,12 @@ body{
 
 }
 
+txt{
+  font-size: 1.1em;
+  margin: 0px 0px 0px 0px;
+  align: left;
+}
+
 h1{
   font-family: "vintage", "HelveticaNeue-Light", "Garamond";
   font-size: 4em;
