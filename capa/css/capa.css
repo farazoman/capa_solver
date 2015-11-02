@@ -21,7 +21,7 @@ body{
      background-color: rgb(200, 54, 54); The Fallback */
    background-color: rgba(200, 54, 54, 0.5);
 
-    text-align:center;
+    text-align:left;
     padding-top: 0em 0em 0em 0em;
     color:#4f4f4f;
     font-family: 'autor';
@@ -47,6 +47,7 @@ txt{
 h1{
   font-family: "vintage", "HelveticaNeue-Light", "Garamond";
   font-size: 4em;
+  text-align: center
 }
 
 body {
@@ -76,12 +77,12 @@ button{
   #div1{
     width:40%;
     display:inline-block;
-    text-align:center;
+    text-align:left;
     background-color: red;
   }
 
   #div2{
-    text-align:center;
+    text-align:left;
     width:100%;
     height: 141em;
     padding-left: 0em;
