@@ -1,4 +1,4 @@
-forfun
+CAPA Solver
 ======
 
-just projects that I make for fun
+A project to solve specific physics questions with an imporved graphical interface. 
