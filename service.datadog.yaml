@@ -1,4 +1,21 @@
+---
+apiVersion: v3
+kind: system
+metadata:
+  name: capa_solver
+spec:
+  components:
+    - service:capa_solver
+  tier: data-platform
+  
+---
 apiVersion: v3
 kind: service
 metadata:
   name: capa_solver
+spec:
+  languages:
+    - html
+    - javascript
+  type: web
+  
