@@ -13,6 +13,7 @@ apiVersion: v3
 kind: service
 metadata:
   name: capa_solver
+  owner: data-platform
 spec:
   languages:
     - html
