@@ -24,3 +24,47 @@ datadog:
     - repositoryURL: https://github.com/farazoman/capa_solver
       paths:
         - capa
+
+---
+apiVersion: v3
+kind: api
+metadata:
+  name: API Test
+  description: API Description 
+  displayName: API Test
+  owner: data-platform
+spec:
+  type: openapi
+  interface:
+    definition:
+      info:
+        title: API Name
+      openapi: 3.0.2
+      paths:
+        /api/v2/customers/{id}:
+          get:
+            summary: get customer information
+            operationId: getCustomerInfo
+            tags:
+              - public
+              - important
+            parameters:
+              - in: path
+                name: id
+            responses:
+              '200':
+                description: Successful operation
+                content:
+                  application/vnd.api+json:
+                    schema:
+                      type: object
+                      properties:
+                        data:
+                          type: array
+                          description: Contains customer information
+              '400':
+                description: Invalid arguments
+              '401':
+                description: Unauthorized operation
+              '500':
+                description: Internal server error
