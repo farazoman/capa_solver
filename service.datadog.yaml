@@ -29,7 +29,7 @@ datadog:
 apiVersion: v3
 kind: api
 metadata:
-  name: API Test
+  name: capa_solver
   description: API Description 
   displayName: API Test
   owner: data-platform
